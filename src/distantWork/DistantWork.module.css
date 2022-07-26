@@ -1,0 +1,11 @@
+.mainDistantWork {
+    min-height: 40vh;
+    background-color: #FFDEE9;
+    display: flex;
+    align-items: center;
+}
+
+.distantWorkContainer {
+    flex-direction: column;
+    align-items: center;
+}

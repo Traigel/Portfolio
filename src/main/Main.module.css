@@ -1,5 +1,5 @@
 .mainBlock {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #FFDEE9;
     display: flex;
     align-items: center;
@@ -8,6 +8,7 @@
 .mainContainer {
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .text {

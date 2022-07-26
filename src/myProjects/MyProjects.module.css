@@ -1,6 +1,6 @@
-.skillsBlock {
+.projectsBlock {
     min-height: 100vh;
-    background-color: #DDFEE9;
+    background-color: #F1E2FF;
     display: flex;
     align-items: center;
 }
@@ -15,7 +15,7 @@
     background-color: darkgrey;
 }
 
-.skills {
+.projects {
     border: 1px solid;
     width: 100%;
     display: flex;
