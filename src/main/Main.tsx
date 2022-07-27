@@ -7,9 +7,9 @@ export function Main() {
         <div className={styles.mainBlock}>
             <div className={`${styleContainer.container} ${styles.mainContainer}`}>
                 <div className={styles.text}>
-                    <span>Привет</span>
+                    <span>Привет!</span>
                     <h1>Меня завут Владимир Трайгель</h1>
-                    <p>Я front-end разроботчик</p>
+                    <span>Я front-end разроботчик</span>
                 </div>
                 <div className={styles.photo}></div>
             </div>

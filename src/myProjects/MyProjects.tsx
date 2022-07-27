@@ -6,7 +6,7 @@ import {Project} from './project/Project';
 export function MyProjects() {
     return (
         <div className={styles.projectsBlock}>
-            <div className={`${stylesContainer.container} ${styles.skillsContainer}`}>
+            <div className={`${stylesContainer.container} ${styles.projectsContainer}`}>
                 <h2 className={styles.title}>Мои работы</h2>
                 <div className={styles.projects}>
                     <Project icon={'https://inventure.com.ua/img/thumb.990.660/upload/board/it-project.jpg'} title={'Название проекта'} description={'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>

@@ -8,8 +8,8 @@ export function Contacts() {
             <div className={`${stylesContainer.container} ${styles.contactsContainer}`}>
                 <h2 className={styles.title}>Контакты</h2>
                 <form className={styles.form}>
-                    <input/>
-                    <input/>
+                    <input className={styles.input}/>
+                    <input className={styles.input}/>
                     <textarea className={styles.textarea}/>
                 </form>
                 <h2 className={styles.title}>Отправить</h2>

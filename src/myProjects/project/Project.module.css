@@ -8,8 +8,8 @@
 }
 
 .icon {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,4 +19,10 @@
 
 .button {
     background-color: thistle;
+}
+
+@media (max-width: 754px) {
+    .project {
+        margin-bottom: 15px;
+    }
 }

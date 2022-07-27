@@ -6,8 +6,8 @@ export function DistantWork() {
     return (
         <div className={styles.mainDistantWork}>
             <div className={`${styleContainer.container} ${styles.distantWorkContainer}`}>
-                <h3>Расмотрю варианты удалённой работы</h3>
-                <button>Нанаять меня</button>
+                <h2>Рассматриваю варианты удалённой работы</h2>
+                <span>Нанаять меня</span>
             </div>
         </div>
     );

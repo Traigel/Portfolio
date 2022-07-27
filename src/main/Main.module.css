@@ -16,8 +16,29 @@
     background-color: darkgray;
 }
 
+.text span {
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .photo {
     width: 300px;
     height: 400px;
     background-color: darkgray;
+}
+
+@media (max-width: 1002px) {
+    .text {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 625px) {
+    .text h1 {
+        font-size: 29px;
+    }
+
+    .text span {
+        font-size: 23px;
+    }
 }
