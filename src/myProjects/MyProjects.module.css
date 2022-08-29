@@ -1,6 +1,6 @@
 .projectsBlock {
     min-height: 100vh;
-    background-color: #F1E2FF;
+    background-color: #F8F9FA;
     display: flex;
     align-items: center;
 }
@@ -12,9 +12,26 @@
 }
 
 .title {
+    text-align: center;
     background-color: darkgrey;
     margin-bottom: 50px;
+
 }
+.title h2 {
+    font-size: 2.50rem;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.title span {
+    background-color: #f5df4e;
+    line-height: 1.8;
+    --bs-text-opacity: 1;
+    color: rgba(33,37,41,var(--bs-text-opacity))!important;
+    padding-right: 0.5rem!important;
+    padding-left: 0.5rem!important;
+}
+
 
 .projects {
     border: 1px solid;
@@ -24,7 +41,7 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 754px) {
+@media screen and (max-width: 771px) {
     .projects {
         justify-content: space-around;
     }

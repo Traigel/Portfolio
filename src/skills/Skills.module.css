@@ -24,7 +24,7 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 942px) {
+@media (max-width: 959px) {
     .skills {
         justify-content: space-around;
     }

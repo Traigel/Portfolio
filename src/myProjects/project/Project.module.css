@@ -21,7 +21,7 @@
     background-color: thistle;
 }
 
-@media (max-width: 754px) {
+@media (max-width: 771px) {
     .project {
         margin-bottom: 15px;
     }
