@@ -1,5 +1,5 @@
 .project {
-    width: 300px;
+    width: 415px;
     background-color: white;
     text-align: center;
     display: flex;
@@ -16,6 +16,8 @@
     background-position: center;
     background-size: cover;
 }
+
+
 
 .button {
     background-color: thistle;

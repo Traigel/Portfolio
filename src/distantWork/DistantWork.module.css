@@ -11,12 +11,6 @@
     justify-content: space-between;
 }
 
-.distantWorkContainer h2 {
-    background-color: darkgrey;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 .distantWorkContainer span {
     background-color: darkgrey;
     font-weight: bold;
