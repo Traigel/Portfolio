@@ -5,6 +5,7 @@ import {Project} from './project/Project';
 import {Title} from '../common/components/title/Title';
 import tidoListImg from '../assets/image/Todolist.png';
 import SocialNetworkImg from '../assets/image/SocialNetwork.png'
+import js from '../assets/image/js.svg'
 
 export function MyProjects() {
 

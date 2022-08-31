@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Skill.module.css'
+import js from './../../assets/image/js.svg'
 
 type SkillPropsType = {
     icon: string
