@@ -1,3 +1,5 @@
+@import '../common/styles/Variablies';
+
 .mainDistantWork {
     min-height: 20vh;
     background-color: #FFFEEC;
@@ -6,6 +8,7 @@
 }
 
 .distantWorkContainer {
+    @include container();
     flex-direction: column;
     align-items: center;
     justify-content: space-between;

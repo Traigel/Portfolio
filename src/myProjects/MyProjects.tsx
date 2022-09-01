@@ -1,11 +1,9 @@
 import React from 'react';
-import styles from './MyProjects.module.css'
-import stylesContainer from '../common/styles/Container.module.css'
+import styles from './MyProjects.module.scss'
 import {Project} from './project/Project';
 import {Title} from '../common/components/title/Title';
 import tidoListImg from '../assets/image/Todolist.png';
 import SocialNetworkImg from '../assets/image/SocialNetwork.png'
-import js from '../assets/image/js.svg'
 
 export function MyProjects() {
 
@@ -18,7 +16,7 @@ export function MyProjects() {
 
     return (
         <div className={styles.projectsBlock}>
-            <div className={`${stylesContainer.container} ${styles.projectsContainer}`}>
+            <div className={styles.projectsContainer}>
                 <Title
                     span={'Portfolio'}
                     h2={'Some of my most recent projects'}

@@ -1,12 +1,11 @@
 import React from 'react';
-import styles from './Contacts.module.css'
-import stylesContainer from '../common/styles/Container.module.css'
+import styles from './Contacts.module.scss'
 import {Title} from "../common/components/title/Title";
 
 export function Contacts() {
     return (
         <div className={styles.contactsBlock}>
-            <div className={`${stylesContainer.container} ${styles.contactsContainer}`}>
+            <div className={styles.contactsContainer}>
                 <Title
                     h2={'Contacts'}
                 />

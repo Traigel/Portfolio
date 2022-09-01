@@ -1,3 +1,5 @@
+@import '../common/styles/Variablies';
+
 .mainBlock {
     min-height: 100vh;
     background-color: #f5df4e;
@@ -6,6 +8,7 @@
 }
 
 .mainContainer {
+    @include container();
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;

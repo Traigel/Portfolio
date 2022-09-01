@@ -1,19 +1,19 @@
 import React from 'react';
-import styles from './Skill.module.css'
-import js from './../../assets/image/js.svg'
+import styles from './Skill.module.scss'
+import {SvgNameType, SvgSelector} from "../../common/components/svgSelector/SvgSelector";
 
 type SkillPropsType = {
-    icon: string
-    title: string
+    svgName: SvgNameType
+    title?: string
     description: string
 }
 
 export function Skill(props: SkillPropsType) {
     return (
         <div className={styles.skill}>
-            <div className={styles.icon}>{props.icon}</div>
-            <h3 className={styles.title}>{props.title}</h3>
-            <span className={styles.description}>{props.description}</span>
+            <SvgSelector svgName={props.svgName}/>
+            <h3 className={styles.title}>{props.title ? props.title : props.svgName}</h3>
+            <p className={styles.description}>{props.description}</p>
         </div>
     );
 }

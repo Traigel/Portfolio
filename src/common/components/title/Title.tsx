@@ -10,7 +10,7 @@ export const Title = (props: TitlePropsType) => {
 
     return (
         <div className={styles.title}>
-            {props.span && <span>{props.span}</span>}
+            {props.span && <p><span>{props.span}</span></p>}
             <h2>{props.h2}</h2>
         </div>
     )

@@ -1,3 +1,13 @@
 $texColor: #212529;
-$bgColor: #fff;
+$secondTexColor: #6c757d;
+$bodyBgColor: #fff;
+$bgColor: #F8F9FA;
 $bgSecondColor: #f5df4e;
+
+@mixin container() {
+  //border: 1px solid;
+  height: 70%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
