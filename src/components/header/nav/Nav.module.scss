@@ -32,9 +32,6 @@
       transition: all 0.4s ease-in-out;
       transform: translate(-50%, 0) translateZ(0);
       -webkit-transform: translate(-50%, 0) translateZ(0);
-      @media (max-width: 580px) {
-        bottom: 3px;
-      }
     }
 
     &:hover:after,
@@ -58,13 +55,13 @@
       position: relative;
 
       &:after {
-        @media (max-width: 545px) {
+        @media (max-width: 555px) {
           bottom: 12px;
         }
       }
 
       span {
-        @media (max-width: 370px) {
+        @media (max-width: 380px) {
           visibility: hidden;
           position: absolute;
         }
@@ -81,13 +78,12 @@
       a {
         display: block;
         padding: 10px 5px;;
-        //margin: 10px 3px;
         &:after {
           bottom: 5px;
         }
       }
 
-      @media (max-width: 545px) {
+      @media (max-width: 555px) {
         margin-top: 0;
       }
     }
