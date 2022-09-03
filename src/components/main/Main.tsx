@@ -4,7 +4,7 @@ import photo from '../../assets/image/photo.jpg'
 
 export function Main() {
     return (
-        <div className={styles.mainBlock}>
+        <div className={styles.mainBlock} id={'home'}>
             <div className={styles.mainContainer}>
                 <div className={styles.text}>
                     <span>Привет!</span>

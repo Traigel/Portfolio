@@ -1,13 +1,46 @@
-import React from 'react';
-import styles from './Nav.module.css'
+import React, {useState} from 'react';
+import styles from './Nav.module.scss'
+import {NavType} from "../../../bll/state";
 
-export function Nav() {
+type NavPropsType = {
+    nav: NavType[]
+}
+
+export function Nav(props: NavPropsType) {
+
+    const [menu, setMenu] = useState<boolean>(false)
+
+    const onClickHandler = () => setMenu(!menu)
+
     return (
         <div className={styles.nav}>
-            <a href={''}>Главная</a>
-            <a href={''}>Скилы</a>
-            <a href={''}>Проекты</a>
-            <a href={''}>Контакты</a>
+
+            <div className={styles.navOpen}>
+                {props.nav.map((el, index) => {
+                    return (
+                        <a className={styles.a} key={index} href={el.href}>{el.navName}</a>
+                    )
+                })}
+            </div>
+
+            <div className={styles.menu}>
+                <h3 className={styles.a} onClick={onClickHandler}>
+                    <span>&equiv;</span>Menu</h3>
+                {menu ? <div className={styles.menuOpen}>
+                    {props.nav.map((el, index) => {
+                        return (
+                            <a
+                                key={index}
+                                className={styles.a}
+                                href={el.href}
+                                onClick={onClickHandler}
+                            >
+                                {el.navName}
+                            </a>
+                        )
+                    })}
+                </div> : <div></div>}
+            </div>
         </div>
     );
 }

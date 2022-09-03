@@ -1,0 +1,44 @@
+@import '../../../common/styles/Variablies';
+
+.links {
+
+  a {
+    margin: 10px;
+
+    svg {
+      height: 30px;
+      width: 30px;
+      fill: $texColor;
+      transition-duration: 0.3s;
+      @media (max-width: 545px) {
+        //transition: none;
+        height: 20px;
+        width: 20px;
+      }
+
+    }
+    @media (max-width: 545px) {
+      //visibility: hidden;
+      //position: absolute;
+
+    }
+    &:hover svg {
+      fill: $bgSecondColor;
+    }
+    @media (max-width: 545px) {
+      margin: 2px
+    }
+
+  }
+
+  .language {
+    display: inline-block;
+    margin-left: 20px;
+    @media (max-width: 545px) {
+      margin-left: 10px;
+    }
+  }
+
+}
+
+

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Skill.module.scss'
-import {SvgNameType, SvgSelector} from "../../../common/svgSelector/SvgSelector";
+import {SkillsNameType, SvgSelector} from "../../../common/svgSelector/SvgSelector";
 
 type SkillPropsType = {
-    svgName: SvgNameType
+    svgName: SkillsNameType
     description: string
 }
 

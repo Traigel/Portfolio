@@ -5,19 +5,19 @@ import {Title} from "../../common/title/Title";
 import {SkillsComponentsType} from "../../bll/state";
 
 type SkillsPropsType = {
-    skillsComponents: SkillsComponentsType
+    skillsComponent: SkillsComponentsType
 }
 
 export function Skills(props: SkillsPropsType) {
     return (
-        <div className={styles.skillsBlock}>
+        <div className={styles.skillsBlock}  id={'skills'}>
             <div className={styles.skillsContainer}>
                 <Title
-                    span={props.skillsComponents.span}
-                    h2={props.skillsComponents.title}
+                    span={props.skillsComponent.span}
+                    h2={props.skillsComponent.title}
                 />
                 <div className={styles.skills}>
-                    {props.skillsComponents.skills.map((el, index) => {
+                    {props.skillsComponent.skills.map((el, index) => {
                         return (
                             <Skill
                                 key={index}

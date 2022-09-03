@@ -4,7 +4,7 @@ import {Title} from "../../common/title/Title";
 
 export function Contacts() {
     return (
-        <div className={styles.contactsBlock}>
+        <div className={styles.contactsBlock} id={'contacts'} >
             <div className={styles.contactsContainer}>
                 <Title
                     h2={'Contacts'}

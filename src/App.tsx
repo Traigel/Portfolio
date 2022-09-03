@@ -12,10 +12,10 @@ import {state} from "./bll/state"
 function App() {
     return (
         <div className="App">
-            <Header/>
+            <Header headerComponent={state['ru'].headerComponent}/>
             <Main/>
-            <Skills skillsComponents={state['ru'].skillsComponents}/>
-            <MyProjects projectsComponents={state['ru'].projectsComponents}/>
+            <Skills skillsComponent={state['ru'].skillsComponent}/>
+            <MyProjects projectsComponent={state['ru'].projectsComponent}/>
             <DistantWork/>
             <Contacts/>
             <Footer/>

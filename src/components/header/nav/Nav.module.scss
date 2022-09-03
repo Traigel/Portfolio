@@ -1,0 +1,102 @@
+@import '../../../common/styles/Variablies';
+
+.nav {
+  //border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+
+  .a {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    position: relative;
+    color: $texColor;
+    cursor: pointer;
+    line-height: 1;
+    text-decoration: none;
+
+    &:after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 0;
+      left: 50%;
+      right: 0;
+      bottom: 9px;
+      background-color: transparent;
+      color: $bodyBgColor;
+      border-width: 0 0 3px 0;
+      border-style: solid;
+      border-color: #f5df4e;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      transform: translate(-50%, 0) translateZ(0);
+      -webkit-transform: translate(-50%, 0) translateZ(0);
+      @media (max-width: 580px) {
+        bottom: 3px;
+      }
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+  }
+
+  .navOpen {
+    @media (max-width: 955px) {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+
+  .menu {
+    visibility: hidden;
+    position: absolute;
+
+    h3 {
+      position: relative;
+
+      &:after {
+        @media (max-width: 545px) {
+          bottom: 12px;
+        }
+      }
+
+      span {
+        @media (max-width: 370px) {
+          visibility: hidden;
+          position: absolute;
+        }
+      }
+    }
+
+    .menuOpen {
+      position: absolute;
+      background-color: $bgColor;
+      border-radius: 5px;
+      box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+      margin-top: 10px;
+
+      a {
+        display: block;
+        padding: 10px 5px;;
+        //margin: 10px 3px;
+        &:after {
+          bottom: 5px;
+        }
+      }
+
+      @media (max-width: 545px) {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 955px) {
+      visibility: visible;
+      position: static;
+    }
+
+  }
+
+}
