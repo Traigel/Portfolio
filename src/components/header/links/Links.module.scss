@@ -10,35 +10,40 @@
       width: 30px;
       fill: $texColor;
       transition-duration: 0.3s;
-      @media (max-width: 545px) {
-        //transition: none;
+      @media (max-width: 555px) {
         height: 20px;
         width: 20px;
       }
 
     }
-    @media (max-width: 545px) {
-      //visibility: hidden;
-      //position: absolute;
 
-    }
     &:hover svg {
       fill: $bgSecondColor;
     }
-    @media (max-width: 545px) {
+
+    @media (max-width: 555px) {
       margin: 2px
     }
-
   }
 
   .language {
     display: inline-block;
     margin-left: 20px;
-    @media (max-width: 545px) {
+    @media (max-width: 555px) {
       margin-left: 10px;
     }
-  }
+    @media (max-width: 355px) {
+      margin: 2px
+    }
 
+    span {
+      cursor: pointer;
+    }
+
+    .active {
+      color: $bgSecondColor;
+    }
+  }
 }
 
 

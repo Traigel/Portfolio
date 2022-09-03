@@ -4,6 +4,7 @@ import {NavType} from "../../../bll/state";
 
 type NavPropsType = {
     nav: NavType[]
+    menuName: string
 }
 
 export function Nav(props: NavPropsType) {
@@ -25,7 +26,7 @@ export function Nav(props: NavPropsType) {
 
             <div className={styles.menu}>
                 <h3 className={styles.a} onClick={onClickHandler}>
-                    <span>&equiv;</span>Menu</h3>
+                    <span>&equiv;</span> {props.menuName}</h3>
                 {menu ? <div className={styles.menuOpen}>
                     {props.nav.map((el, index) => {
                         return (

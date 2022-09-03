@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.scss';
 import {Header} from "./components/header/Header";
 import {Main} from "./components/main/Main";
@@ -10,12 +10,19 @@ import {Footer} from "./components/footer/Footer";
 import {state} from "./bll/state"
 
 function App() {
+
+    const [language, setLanguage] = useState<LanguageType>('en')
+
     return (
         <div className="App">
-            <Header headerComponent={state['ru'].headerComponent}/>
+            <Header
+                headerComponent={state[language].headerComponent}
+                callback={setLanguage}
+                language={language}
+            />
             <Main/>
-            <Skills skillsComponent={state['ru'].skillsComponent}/>
-            <MyProjects projectsComponent={state['ru'].projectsComponent}/>
+            <Skills skillsComponent={state[language].skillsComponent}/>
+            <MyProjects projectsComponent={state[language].projectsComponent}/>
             <DistantWork/>
             <Contacts/>
             <Footer/>
@@ -24,3 +31,6 @@ function App() {
 }
 
 export default App;
+
+//type
+export type LanguageType = 'en' | 'ru'

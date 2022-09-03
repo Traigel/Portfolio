@@ -4,9 +4,12 @@ import styles from './Header.module.scss'
 import {SvgSelector} from "../../common/svgSelector/SvgSelector";
 import {Links} from "./links/Links";
 import {HeaderComponentType} from "../../bll/state";
+import {LanguageType} from "../../App";
 
 type HeaderPropsType = {
     headerComponent: HeaderComponentType
+    callback: (language: LanguageType) => void
+    language: LanguageType
 }
 
 export function Header(props: HeaderPropsType) {
@@ -16,8 +19,12 @@ export function Header(props: HeaderPropsType) {
                 <a href={'#'} className={styles.logo}>
                     <SvgSelector svgName={"PortfolioSvg"}/>
                 </a>
-                <Nav nav={props.headerComponent.nav}/>
-                <Links links={props.headerComponent.links}/>
+                <Nav nav={props.headerComponent.nav} menuName={props.headerComponent.menuName}/>
+                <Links
+                    links={props.headerComponent.links}
+                    callback={props.callback}
+                    language={props.language}
+                />
             </div>
         </div>
     );
