@@ -2,6 +2,14 @@ import {LinksNameType, SkillsNameType} from "../common/svgSelector/SvgSelector";
 import SocialNetworkImg from '../assets/image/SocialNetwork.png'
 import tidoListImg from '../assets/image/Todolist.png';
 
+const links: LinksType[] = [
+    {href: 'https://github.com/Traihel', svgName: 'GitHub'},
+    {href: 'https://www.instagram.com/vova_tron/', svgName: 'Instagram'},
+    {href: 'https://www.linkedin.com/in/vladimir-traihel/', svgName: 'Linkedin'},
+    {href: 'https://vk.com/grodno1993', svgName: 'VK'},
+    {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
+]
+
 export const state: StateType = {
     en: {
         headerComponent: {
@@ -12,13 +20,7 @@ export const state: StateType = {
                 {href: '#projects', navName: 'Portfolio'},
                 {href: '#contacts', navName: 'Contact'},
             ],
-            links: [
-                {href: 'https://github.com/Traihel', svgName: 'GitHub'},
-                {href: 'https://www.instagram.com/vova_tron/', svgName: 'Instagram'},
-                {href: 'https://www.linkedin.com/in/vladimir-traihel/', svgName: 'Linkedin'},
-                {href: 'https://vk.com/grodno1993', svgName: 'VK'},
-                {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
-            ]
+            links
         },
         skillsComponent: {
             span: 'What I Do?',
@@ -117,13 +119,7 @@ export const state: StateType = {
                 {href: '#projects', navName: 'Проекты'},
                 {href: '#contacts', navName: 'Контакты'},
             ],
-            links: [
-                {href: 'https://github.com/Traihel', svgName: 'GitHub'},
-                {href: 'https://www.instagram.com/vova_tron/', svgName: 'Instagram'},
-                {href: 'https://www.linkedin.com/in/vladimir-traihel/', svgName: 'Linkedin'},
-                {href: 'https://vk.com/grodno1993', svgName: 'VK'},
-                {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
-            ]
+            links
         },
         skillsComponent: {
             span: 'Что я умею?',
@@ -214,6 +210,7 @@ export const state: StateType = {
         }
     },
 }
+
 
 //type
 type StateType = {
