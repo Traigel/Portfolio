@@ -1,20 +1,21 @@
 import React from 'react';
 import './App.scss';
-import {Header} from "./header/Header";
-import {Main} from "./main/Main";
-import {Skills} from "./skills/Skills";
-import {MyProjects} from "./myProjects/MyProjects";
-import {DistantWork} from "./distantWork/DistantWork";
-import {Contacts} from "./contacts/Contacts";
-import {Footer} from "./footer/Footer";
+import {Header} from "./components/header/Header";
+import {Main} from "./components/main/Main";
+import {Skills} from "./components/skills/Skills";
+import {MyProjects} from "./components/myProjects/MyProjects";
+import {DistantWork} from "./components/distantWork/DistantWork";
+import {Contacts} from "./components/contacts/Contacts";
+import {Footer} from "./components/footer/Footer";
+import {state} from "./bll/state"
 
 function App() {
     return (
         <div className="App">
             <Header/>
             <Main/>
-            <Skills/>
-            <MyProjects/>
+            <Skills skillsComponents={state['ru'].skillsComponents}/>
+            <MyProjects projectsComponents={state['ru'].projectsComponents}/>
             <DistantWork/>
             <Contacts/>
             <Footer/>

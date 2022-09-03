@@ -1,0 +1,28 @@
+@import '../../common/styles/Variablies';
+
+.mainDistantWork {
+    min-height: 20vh;
+    background-color: #FFFEEC;
+    display: flex;
+    align-items: center;
+}
+
+.distantWorkContainer {
+    @include container();
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.distantWorkContainer span {
+    background-color: darkgrey;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 650px) {
+    .distantWorkContainer {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

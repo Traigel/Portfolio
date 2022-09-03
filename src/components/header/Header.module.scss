@@ -1,0 +1,13 @@
+@import '../../common/styles/Variablies';
+
+.header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.headerContainer {
+    @include container();
+    justify-content: flex-end;
+    align-items: center;
+}
