@@ -16,7 +16,7 @@ export function SkillsInfo(props: SkillsInfoPropsType) {
             setSkill(props.arrSkills[i])
             if (i < arrLength) i++
             else i = 0
-        }, 2000)
+        }, 1800)
         return () => clearInterval(intervalID)
     }, [])
 

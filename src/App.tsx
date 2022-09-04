@@ -27,7 +27,7 @@ function App() {
             <MyProjects projectsComponent={state[language].projectsComponent}/>
             <DistantWork distantWorkComponent={state[language].distantWorkComponent}/>
             <Contacts contactsComponent={state[language].contactsComponent}/>
-            <Footer/>
+            <Footer footerComponent={state[language].footerComponent}/>
         </div>
     );
 }

@@ -1,22 +1,18 @@
 import React from 'react';
 import styles from './Footer.module.scss'
-import {Title} from "../../common/title/Title";
+import {FooterComponentType} from "../../bll/state";
 
-export function Footer() {
+type FooterPropsType = {
+    footerComponent: FooterComponentType
+}
+
+export function Footer(props: FooterPropsType) {
     return (
-        <div className={styles.footerBlock}>
+        <footer className={styles.footerBlock}>
             <div className={styles.footerContainer}>
-                <Title
-                    h2={'Traihel Vladimir'}
-                />
-                <div className={styles.imgs}>
-                    <div className={styles.img}></div>
-                    <div className={styles.img}></div>
-                    <div className={styles.img}></div>
-                    <div className={styles.img}></div>
-                </div>
-                <h4>© 2022 Все права защищены</h4>
+                <p>{props.footerComponent.copyright}</p>
+                <p>{props.footerComponent.designed}</p>
             </div>
-        </div>
+        </footer>
     );
 }

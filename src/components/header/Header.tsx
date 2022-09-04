@@ -14,7 +14,7 @@ type HeaderPropsType = {
 
 export function Header(props: HeaderPropsType) {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.headerContainer}>
                 <a href={'#'} className={styles.logo}>
                     <SvgSelector svgName={"PortfolioSvg"}/>
@@ -26,6 +26,6 @@ export function Header(props: HeaderPropsType) {
                     language={props.language}
                 />
             </div>
-        </div>
+        </header>
     );
 }

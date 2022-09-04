@@ -158,6 +158,10 @@ export const state: StateType = {
             formMessage: 'How can I Help you?:',
             button: 'Send'
 
+        },
+        footerComponent: {
+            copyright: 'Copyright © 2022. All Rights Reserved.',
+            designed: 'Developed by Traihel Vladimir'
         }
     },
     ru: {
@@ -296,6 +300,10 @@ export const state: StateType = {
             email: 'Адрес электронной почты:',
             formMessage: 'Чем я могу помочь?:',
             button: 'Отправить'
+        },
+        footerComponent: {
+            copyright: 'Copyright © 2022. Все права защищены.',
+            designed: 'Разработал Трайгель Владимир'
         }
     },
 }
@@ -310,6 +318,7 @@ type StateType = {
         projectsComponent: ProjectsComponentsType
         distantWorkComponent: DistantWorkComponentType
         contactsComponent: ContactsComponentType
+        footerComponent: FooterComponentType
     }
 }
 
@@ -393,4 +402,9 @@ export type ContactsComponentType = {
     email: string
     formMessage: string
     button: string
+}
+
+export type FooterComponentType = {
+    copyright: string
+    designed: string
 }
