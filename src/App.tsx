@@ -13,7 +13,7 @@ import {AboutMe} from "./components/aboutMe/AboutMe";
 function App() {
 
     const [language, setLanguage] = useState<LanguageType>('en')
-    console.log('app')
+
     return (
         <div className="App">
             <Header
@@ -26,7 +26,7 @@ function App() {
             <Skills skillsComponent={state[language].skillsComponent}/>
             <MyProjects projectsComponent={state[language].projectsComponent}/>
             <DistantWork distantWorkComponent={state[language].distantWorkComponent}/>
-            <Contacts/>
+            <Contacts contactsComponent={state[language].contactsComponent}/>
             <Footer/>
         </div>
     );

@@ -10,11 +10,12 @@ type SkillPropsType = {
     description: string
     style?: ProjectStyleType
     img: string
+    href: string
 }
 
 export function Project(props: SkillPropsType) {
     return (
-        <div className={styles.project}>
+        <a href={props.href} className={styles.project} target="_blank">
             <div className={styles.block}>
                 <img className={styles.icon} alt={'iconProject'} src={props.img}/>
                 <div className={styles.projectInfo}>
@@ -22,6 +23,7 @@ export function Project(props: SkillPropsType) {
                     <span className={styles.description}>{props.description}</span>
                 </div>
             </div>
-        </div>
+        </a>
+
     );
 }

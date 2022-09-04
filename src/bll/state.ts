@@ -4,7 +4,13 @@ import bgImg from '../assets/image/intro-bg-2.jpg'
 import SocialNetworkImg from '../assets/image/SocialNetwork.jpg'
 import tidoListImg from '../assets/image/Todolist.jpg';
 
-const links: LinksType[] = [
+const headerLinks: LinksType[] = [
+    {href: 'https://github.com/Traihel', svgName: 'GitHub'},
+    {href: 'https://www.instagram.com/vova_tron/', svgName: 'Instagram'},
+    {href: 'https://www.linkedin.com/in/vladimir-traihel/', svgName: 'Linkedin'},
+]
+
+const contactsLinks: LinksType[] = [
     {href: 'https://github.com/Traihel', svgName: 'GitHub'},
     {href: 'https://www.instagram.com/vova_tron/', svgName: 'Instagram'},
     {href: 'https://www.linkedin.com/in/vladimir-traihel/', svgName: 'Linkedin'},
@@ -12,7 +18,7 @@ const links: LinksType[] = [
     {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
 ]
 
-const arrSkills: string[] = ['JavaScript', 'TypeScript', 'React', 'Redux', 'HTML/CSS']
+const arrSkills: string[] = ['JavaScript', 'React', 'TypeScript', 'Redux', 'HTML/CSS', 'SASS/LESS', 'Axios', 'Unit Testing', 'Storybook', 'Material-ui', 'Bootstrap', 'Git', 'Postman']
 
 export const state: StateType = {
     en: {
@@ -25,7 +31,7 @@ export const state: StateType = {
                 {href: '#projects', navName: 'Portfolio'},
                 {href: '#contacts', navName: 'Contact'},
             ],
-            links
+            headerLinks
         },
         mainComponent: {
             h1: `Hi, I'm a developer`,
@@ -40,7 +46,7 @@ export const state: StateType = {
             title: 'Know Me More',
             h2: `Hi, I'm `,
             name: 'Vladimir Traihel',
-            aboutMe: 'I\'m an experienced developer with experience building SPAs using React/Redux/TypeScript/HTML&CSS/SCSS. I like to develop simple, clean and attractive applications that bring real value to the end user. Now I am improving my skills in this direction and expanding with new technologies. I spend my free time reading educational literature, as well as improving my English. Executive, punctual, quickly find a common language with people.',
+            aboutMe: 'I\'m an experienced developer with experience building SPAs using React/Redux/TypeScript/HTML&CSS/SCSS. I like to develop applications that bring real value to the end user. Now I am improving my skills in this area and expanding my knowledge with new technologies. I spend my free time reading educational literature, as well as improving my English. Executive, punctual, quickly find a common language with people.',
             contacts: [
                 {title: 'Name:', info: 'Vladimir Traihel'},
                 {title: 'Email:', info: 'Vovatraigel@gmail.com'},
@@ -126,11 +132,13 @@ export const state: StateType = {
                     title: 'Social Network',
                     img: SocialNetworkImg,
                     description: 'An online platform that is used for communication, dating, creating social relationships between people',
+                    href: '#'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'List of things you need to do or want to do.',
+                    href: '#'
                 },
 
             ]
@@ -139,6 +147,17 @@ export const state: StateType = {
             title: 'Interested in working with me?',
             a: 'Hire Me!',
             bgImg
+        },
+        contactsComponent: {
+            title: 'Let\'s get in touch',
+            p: 'Please share as much info, as possible so we can get the most out of our first catch-up. I will be glad to work with you if my skills and experience suit you. Willing to talk over the phone or in person.',
+            h3: 'Call:',
+            contactsLinks,
+            name: 'What is Your Name:',
+            email: 'Your Email Address:',
+            formMessage: 'How can I Help you?:',
+            button: 'Send'
+
         }
     },
     ru: {
@@ -151,7 +170,7 @@ export const state: StateType = {
                 {href: '#projects', navName: 'Проекты'},
                 {href: '#contacts', navName: 'Контакты'},
             ],
-            links
+            headerLinks
         },
         mainComponent: {
             h1: `Привет`,
@@ -166,7 +185,7 @@ export const state: StateType = {
             title: 'Узнать обо мне больше',
             h2: 'Привет, меня зовут ',
             name: 'Владимир Трайгель',
-            aboutMe: 'Я – опытный разработчик, имеющий опыт создания SPA с использованием React/Redux/TypeScript/HTML&CSS/SCSS. Мне нравится разрабатывать простые, чистые и привлекательные приложения, которые приносят реальную пользу конечному пользователю.  Сейчас совершенствую свои навыки в этом направление и расширяя новыми технологиями. Свободное время провожу за чтением обучающей литературы, а также улучшением английского языка. Исполнительный, пунктуальный, быстро нахожу общий язык с людьми.',
+            aboutMe: 'Я – опытный разработчик, имеющий опыт создания SPA с использованием React/Redux/TypeScript/HTML&CSS/SCSS. Мне нравится разрабатывать приложения, которые приносят реальную пользу конечному пользователю.  Сейчас совершенствую свои навыки в этом направление и расширяю знания новыми технологиями. Свободное время провожу за чтением обучающей литературы, а также улучшением английского языка. Исполнительный, пунктуальный, быстро нахожу общий язык с людьми.',
             contacts: [
                 {title: 'Имя:', info: 'Владимир Трайгель'},
                 {title: 'Email:', info: 'Vovatraigel@gmail.com'},
@@ -252,11 +271,13 @@ export const state: StateType = {
                     title: 'Social Network',
                     img: SocialNetworkImg,
                     description: 'Онлайн-платформа, которая используется для общения, знакомств, создания социальных отношений между людьми',
+                    href: '#'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'Список дел, которые вам нужно выполнить или того, что вы хотите сделать',
+                    href: '#'
                 },
 
             ]
@@ -265,6 +286,16 @@ export const state: StateType = {
             title: 'Заинтересованы работать со мной?',
             a: 'Связаться со мной',
             bgImg
+        },
+        contactsComponent: {
+            title: 'Контакты',
+            p: 'Пожалуйста, поделитесь как можно большей информацией, чтобы мы могли получить максимальную отдачу от нашей первой встречи. Буду рад работать с вами, если мои навыки и опыт подойдут вам. Готов пообщаться по телефону или лично.',
+            h3: 'Тел:',
+            contactsLinks,
+            name: 'Ваше имя:',
+            email: 'Адрес электронной почты:',
+            formMessage: 'Чем я могу помочь?:',
+            button: 'Отправить'
         }
     },
 }
@@ -278,13 +309,14 @@ type StateType = {
         skillsComponent: SkillsComponentsType
         projectsComponent: ProjectsComponentsType
         distantWorkComponent: DistantWorkComponentType
+        contactsComponent: ContactsComponentType
     }
 }
 
 export type HeaderComponentType = {
     menuName: string
     nav: NavType[]
-    links: LinksType[]
+    headerLinks: LinksType[]
 }
 
 export type NavType = {
@@ -343,10 +375,22 @@ type ProjectType = {
     title: string
     img: string
     description: string
+    href: string
 }
 
 export type DistantWorkComponentType = {
     title: string
     a: string
     bgImg: string
+}
+
+export type ContactsComponentType = {
+    title: string
+    p: string
+    h3: string
+    contactsLinks: LinksType[]
+    name: string
+    email: string
+    formMessage: string
+    button: string
 }

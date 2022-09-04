@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import styles from './Main.module.scss'
 import {MainComponentType} from "../../bll/state";
 import {SkillsInfo} from "./skillsInfo/SkillsInfo";

@@ -6,11 +6,15 @@ import {LanguageType} from "../../../App";
 
 type LinksPropsType = {
     links: LinksType[]
-    callback: (language: LanguageType) => void
-    language: LanguageType
+    callback?: (language: LanguageType) => void
+    language?: LanguageType
 }
 
 export function Links(props: LinksPropsType) {
+
+    const onClickHandler = (language: LanguageType) => {
+        props.callback && props.callback(language)
+    }
 
     return (
         <div className={styles.links}>
@@ -21,16 +25,19 @@ export function Links(props: LinksPropsType) {
                     </a>
                 )
             })}
-            <div className={styles.language}>
+            {props.callback &&
+                <div className={styles.language}>
                 <span
-                    onClick={() => props.callback("en")}
+                    onClick={() => onClickHandler("en")}
                     className={props.language === "en" ? styles.active : ''}
                 >en</span>
-                |
-                <span onClick={() => props.callback("ru")}
-                      className={props.language === "ru" ? styles.active : ''}
-                >ru</span>
-            </div>
+                    |
+                    <span onClick={() => onClickHandler("ru")}
+                          className={props.language === "ru" ? styles.active : ''}
+                    >ru</span>
+                </div>
+            }
+
         </div>
     );
 }

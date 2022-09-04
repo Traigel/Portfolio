@@ -25,8 +25,7 @@ export function Nav(props: NavPropsType) {
             </div>
 
             <div className={styles.menu}>
-                <h3 className={styles.a} onClick={onClickHandler}>
-                    <span>&equiv;</span> {props.menuName}</h3>
+                <h3 className={styles.a} onClick={onClickHandler}>&equiv; {props.menuName}</h3>
                 {menu ? <div className={styles.menuOpen}>
                     {props.nav.map((el, index) => {
                         return (

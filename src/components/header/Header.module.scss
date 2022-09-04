@@ -30,11 +30,13 @@
         }
       }
 
-      @media (max-width: 650px) {
+      @media (max-width: 555px) {
         visibility: hidden;
         position: absolute;
       }
     }
+
+
   }
   @media (max-width: 555px) {
     height: 45px;

@@ -41,7 +41,7 @@
   }
 
   .navOpen {
-    @media (max-width: 1075px) {
+    @media (max-width: 947px) {
       visibility: hidden;
       position: absolute;
     }
@@ -60,12 +60,6 @@
         }
       }
 
-      span {
-        @media (max-width: 380px) {
-          visibility: hidden;
-          position: absolute;
-        }
-      }
     }
 
     .menuOpen {
@@ -88,7 +82,7 @@
       }
     }
 
-    @media (max-width: 1075px) {
+    @media (max-width: 947px) {
       visibility: visible;
       position: static;
     }

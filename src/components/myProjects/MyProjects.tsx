@@ -25,6 +25,7 @@ export function MyProjects(props: ProjectsPropsType) {
                                 title={el.title}
                                 img={el.img}
                                 description={el.description}
+                                href={el.href}
                             />
                         )
                     })}

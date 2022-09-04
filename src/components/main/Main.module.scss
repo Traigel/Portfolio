@@ -18,13 +18,13 @@
     flex-wrap: wrap;
     margin-top: 40px;
     margin-bottom: 40px;
-    @media (max-width: 1319px) {
+    @media (max-width: 1328px) {
       flex-direction: column;
     }
 
     .text {
-      width: 50%;
-      @media (max-width: 1319px) {
+      width: 57%;
+      @media (max-width: 1328px) {
         text-align: center;
         margin-top: 24px;
         order: 2;
@@ -92,7 +92,7 @@
     .photo {
       max-width: 100%;
       align-self: center;
-      @media (max-width: 1319px) {
+      @media (max-width: 1328px) {
         order: 1;
       }
 
@@ -112,11 +112,11 @@
           display: block;
           max-width: 100%;
           vertical-align: inherit;
-          @media (max-width: 1399px) {
+          @media (max-width: 1432px) {
             height: 419px;
             width: 419px;;
           }
-          @media (max-width: 1319px) {
+          @media (max-width: 1328px) {
             height: 455px;
             width: 455px;
           }

@@ -21,7 +21,7 @@ export function Header(props: HeaderPropsType) {
                 </a>
                 <Nav nav={props.headerComponent.nav} menuName={props.headerComponent.menuName}/>
                 <Links
-                    links={props.headerComponent.links}
+                    links={props.headerComponent.headerLinks}
                     callback={props.callback}
                     language={props.language}
                 />
