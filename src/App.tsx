@@ -8,6 +8,7 @@ import {DistantWork} from "./components/distantWork/DistantWork";
 import {Contacts} from "./components/contacts/Contacts";
 import {Footer} from "./components/footer/Footer";
 import {state} from "./bll/state"
+import {AboutMe} from "./components/aboutMe/AboutMe";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
                 language={language}
             />
             <Main mainComponent={state[language].mainComponent}/>
+            <AboutMe aboutMeComponent={state[language].aboutMeComponent}/>
             <Skills skillsComponent={state[language].skillsComponent}/>
             <MyProjects projectsComponent={state[language].projectsComponent}/>
             <DistantWork/>

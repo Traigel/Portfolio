@@ -19,6 +19,7 @@ export const state: StateType = {
             menuName: 'Menu',
             nav: [
                 {href: '#home', navName: 'Home'},
+                {href: '#about', navName: 'About'},
                 {href: '#skills', navName: 'Skills'},
                 {href: '#projects', navName: 'Portfolio'},
                 {href: '#contacts', navName: 'Contact'},
@@ -32,6 +33,19 @@ export const state: StateType = {
             a1: 'View My Works',
             a2: 'Contact Me',
             photo: myPhoto
+        },
+        aboutMeComponent: {
+            span: 'About Me',
+            title: 'Know Me More',
+            h2: `Hi, I'm `,
+            name: 'Vladimir Traihel',
+            aboutMe: 'I\'m an experienced developer with experience building SPAs using React/Redux/TypeScript/HTML&CSS/SCSS. I like to develop simple, clean and attractive applications that bring real value to the end user. Now I am improving my skills in this direction and expanding with new technologies. I spend my free time reading educational literature, as well as improving my English. Executive, punctual, quickly find a common language with people.',
+            contacts: [
+                {title: 'Name:', info: 'Vladimir Traihel'},
+                {title: 'Email:', info: 'Vovatraigel@gmail.com'},
+                {title: 'Date of birth:', info: '17 September, 1993'},
+                {title: 'From:', info: 'Grodno, Belarus.'},
+            ]
         },
         skillsComponent: {
             span: 'What I Do?',
@@ -115,7 +129,7 @@ export const state: StateType = {
                 {
                     title: 'Todo list',
                     img: tidoListImg,
-                    description: 'List of things you need to do or want to do',
+                    description: 'List of things you need to do or want to do.',
                 },
 
             ]
@@ -126,6 +140,7 @@ export const state: StateType = {
             menuName: 'Меню',
             nav: [
                 {href: '#home', navName: 'Главная'},
+                {href: '#about', navName: 'Обо мне'},
                 {href: '#skills', navName: 'Скилы'},
                 {href: '#projects', navName: 'Проекты'},
                 {href: '#contacts', navName: 'Контакты'},
@@ -139,6 +154,19 @@ export const state: StateType = {
             a1: 'Мои работы',
             a2: 'Связаться со мной',
             photo: myPhoto
+        },
+        aboutMeComponent: {
+            span: 'Обо мне',
+            title: 'Узнать обо мне больше',
+            h2: 'Привет, меня зовут ',
+            name: 'Владимир Трайгель',
+            aboutMe: 'Я – опытный разработчик, имеющий опыт создания SPA с использованием React/Redux/TypeScript/HTML&CSS/SCSS. Мне нравится разрабатывать простые, чистые и привлекательные приложения, которые приносят реальную пользу конечному пользователю.  Сейчас совершенствую свои навыки в этом направление и расширяя новыми технологиями. Свободное время провожу за чтением обучающей литературы, а также улучшением английского языка. Исполнительный, пунктуальный, быстро нахожу общий язык с людьми.',
+            contacts: [
+                {title: 'Имя:', info: 'Владимир Трайгель'},
+                {title: 'Email:', info: 'Vovatraigel@gmail.com'},
+                {title: 'Дата рождения:', info: '17.09.1993'},
+                {title: 'Из:', info: 'Гродно, Беларусь.'},
+            ]
         },
         skillsComponent: {
             span: 'Что я умею?',
@@ -230,12 +258,12 @@ export const state: StateType = {
     },
 }
 
-
 //type
 type StateType = {
     [key: string]: {
         headerComponent: HeaderComponentType
         mainComponent: MainComponentType
+        aboutMeComponent: AboutMeComponent
         skillsComponent: SkillsComponentsType
         projectsComponent: ProjectsComponentsType
     }
@@ -252,7 +280,7 @@ export type NavType = {
     navName: string
 }
 
-type HrefNavType = '#home' | '#skills' | '#projects' | '#contacts'
+type HrefNavType = '#home' | '#skills' | '#projects' | '#contacts' | '#about'
 
 export type LinksType = {
     href: string
@@ -266,7 +294,20 @@ export type MainComponentType = {
     a1: string
     a2: string
     photo: string
+}
 
+export type AboutMeComponent = {
+    span: string
+    title: string
+    h2: string
+    name: string
+    aboutMe: string
+    contacts: ContactsType[]
+}
+
+type ContactsType = {
+    title: string
+    info: string
 }
 
 export type SkillsComponentsType = {
