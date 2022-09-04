@@ -132,13 +132,13 @@ export const state: StateType = {
                     title: 'Social Network',
                     img: SocialNetworkImg,
                     description: 'An online platform that is used for communication, dating, creating social relationships between people',
-                    href: '#'
+                    href: 'https://traihel.github.io/Social-network-TS/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
-                    description: 'List of things you need to do or want to do.',
-                    href: '#'
+                    description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list.',
+                    href: 'https://traihel.github.io/ToDoList-TS/'
                 },
 
             ]
@@ -275,13 +275,13 @@ export const state: StateType = {
                     title: 'Social Network',
                     img: SocialNetworkImg,
                     description: 'Онлайн-платформа, которая используется для общения, знакомств, создания социальных отношений между людьми',
-                    href: '#'
+                    href: 'https://traihel.github.io/Social-network-TS/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
-                    description: 'Список дел, которые вам нужно выполнить или того, что вы хотите сделать',
-                    href: '#'
+                    description: 'Список дел, которые вам нужно выполнить или того, что вы хотите сделать. При выполнении задачи, её обычно вычеркивают из списка.',
+                    href: 'https://traihel.github.io/ToDoList-TS/'
                 },
 
             ]

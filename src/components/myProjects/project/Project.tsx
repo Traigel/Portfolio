@@ -20,7 +20,7 @@ export function Project(props: SkillPropsType) {
                 <img className={styles.icon} alt={'iconProject'} src={props.img}/>
                 <div className={styles.projectInfo}>
                     <h3 className={styles.title}>{props.title}</h3>
-                    <span className={styles.description}>{props.description}</span>
+                    <p className={styles.description}>{props.description}</p>
                 </div>
             </div>
         </a>
