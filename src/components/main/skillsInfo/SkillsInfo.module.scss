@@ -6,5 +6,10 @@
   font-size: 90px;
   text-transform: uppercase;
   margin-left: -0.25rem;
-  transition-duration: 0.3s;
+  @media (max-width: 710px) {
+    font-size: 60px
+  }
+  @media (max-width: 559px) {
+    font-size: 40px
+  }
 }

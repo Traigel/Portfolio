@@ -11,14 +11,14 @@ export function SkillsInfo(props: SkillsInfoPropsType) {
     const arrLength = props.arrSkills.length - 1
     let i = 0
 
-    // useEffect(() => {
-    //     const intervalID = setInterval(() => {
-    //         setSkill(props.arrSkills[i])
-    //         if (i < arrLength) i++
-    //         else i = 0
-    //     }, 2000)
-    //     return () => clearInterval(intervalID)
-    // }, [])
+    useEffect(() => {
+        const intervalID = setInterval(() => {
+            setSkill(props.arrSkills[i])
+            if (i < arrLength) i++
+            else i = 0
+        }, 2000)
+        return () => clearInterval(intervalID)
+    }, [])
 
     return (
         <h2 className={styles.skillsInfo}>{skill}</h2>

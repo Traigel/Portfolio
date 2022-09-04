@@ -25,7 +25,7 @@ function App() {
             <AboutMe aboutMeComponent={state[language].aboutMeComponent}/>
             <Skills skillsComponent={state[language].skillsComponent}/>
             <MyProjects projectsComponent={state[language].projectsComponent}/>
-            <DistantWork/>
+            <DistantWork distantWorkComponent={state[language].distantWorkComponent}/>
             <Contacts/>
             <Footer/>
         </div>

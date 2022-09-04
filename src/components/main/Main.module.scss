@@ -7,23 +7,41 @@
   align-items: center;
   padding-top: 60px;
 
+  @media (max-width: 555px) {
+    padding-top: 45px;
+  }
+
   .mainContainer {
     @include container();
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media (max-width: 1319px) {
+      flex-direction: column;
+    }
 
     .text {
       width: 50%;
+      @media (max-width: 1319px) {
+        text-align: center;
+        margin-top: 24px;
+        order: 2;
+        width: 100%;
+
+      }
+
       h1 {
         font-weight: 300;
         line-height: 1.3;
         text-transform: uppercase;
-
-        @media (max-width: 1200px) {
-
+        @media (max-width: 559px) {
+          font-size: 30px;
         }
-
+        @media (max-width: 355px) {
+          font-size: 25px;
+        }
       }
 
       p {
@@ -31,6 +49,9 @@
         line-height: 1.8;
         margin-top: 0;
         margin-bottom: 2rem;
+        @media (max-width: 355px) {
+          font-size: 18px;
+        }
       }
 
       a {
@@ -40,6 +61,10 @@
         transition: all 0.5s ease;
         line-height: 1.5;
         text-decoration: none;
+
+        @media (max-width: 520px) {
+          display: block;
+        }
       }
 
       .myWorks {
@@ -67,6 +92,9 @@
     .photo {
       max-width: 100%;
       align-self: center;
+      @media (max-width: 1319px) {
+        order: 1;
+      }
 
       div {
         visibility: visible;
@@ -88,9 +116,12 @@
             height: 419px;
             width: 419px;;
           }
-          @media (max-width: 1199px) {
-            height: 344px;
-            width: 344px;;
+          @media (max-width: 1319px) {
+            height: 455px;
+            width: 455px;
+          }
+          @media (max-width: 630px) {
+            height: 100%;
           }
         }
       }
@@ -99,24 +130,4 @@
 
   }
 
-  @media (max-width: 555px) {
-    padding-top: 45px;
-  }
-
-}
-
-@media (max-width: 1019px) {
-  .text {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 625px) {
-  .text h1 {
-    font-size: 29px;
-  }
-
-  .text span {
-    font-size: 23px;
-  }
 }

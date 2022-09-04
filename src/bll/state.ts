@@ -1,5 +1,6 @@
 import {LinksNameType, SkillsNameType} from "../common/svgSelector/SvgSelector";
 import myPhoto from '../assets/image/photo.jpg'
+import bgImg from '../assets/image/intro-bg-2.jpg'
 import SocialNetworkImg from '../assets/image/SocialNetwork.jpg'
 import tidoListImg from '../assets/image/Todolist.jpg';
 
@@ -133,6 +134,11 @@ export const state: StateType = {
                 },
 
             ]
+        },
+        distantWorkComponent: {
+            title: 'Interested in working with me?',
+            a: 'Hire Me!',
+            bgImg
         }
     },
     ru: {
@@ -254,6 +260,11 @@ export const state: StateType = {
                 },
 
             ]
+        },
+        distantWorkComponent: {
+            title: 'Заинтересованы работать со мной?',
+            a: 'Связаться со мной',
+            bgImg
         }
     },
 }
@@ -266,6 +277,7 @@ type StateType = {
         aboutMeComponent: AboutMeComponent
         skillsComponent: SkillsComponentsType
         projectsComponent: ProjectsComponentsType
+        distantWorkComponent: DistantWorkComponentType
     }
 }
 
@@ -331,4 +343,10 @@ type ProjectType = {
     title: string
     img: string
     description: string
+}
+
+export type DistantWorkComponentType = {
+    title: string
+    a: string
+    bgImg: string
 }

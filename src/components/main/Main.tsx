@@ -17,7 +17,7 @@ export function Main(props: MainPropsType) {
                     <SkillsInfo arrSkills={props.mainComponent.arrSkills}/>
                     <p>{props.mainComponent.location}</p>
                     <a className={styles.myWorks} href={'#projects'}>{props.mainComponent.a1}</a>
-                    <a className={styles.contactMe} href={'#projects'}><span>{props.mainComponent.a2}</span> &#9660;</a>
+                    <a className={styles.contactMe} href={'#contacts'}><span>{props.mainComponent.a2}</span> &#9660;</a>
                 </div>
                 <div className={styles.photo}>
                     <div>
