@@ -12,7 +12,7 @@ import {state} from "./bll/state"
 function App() {
 
     const [language, setLanguage] = useState<LanguageType>('en')
-
+    console.log('app')
     return (
         <div className="App">
             <Header
@@ -20,7 +20,7 @@ function App() {
                 callback={setLanguage}
                 language={language}
             />
-            <Main/>
+            <Main mainComponent={state[language].mainComponent}/>
             <Skills skillsComponent={state[language].skillsComponent}/>
             <MyProjects projectsComponent={state[language].projectsComponent}/>
             <DistantWork/>

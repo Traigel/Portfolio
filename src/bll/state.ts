@@ -1,6 +1,7 @@
 import {LinksNameType, SkillsNameType} from "../common/svgSelector/SvgSelector";
-import SocialNetworkImg from '../assets/image/SocialNetwork.png'
-import tidoListImg from '../assets/image/Todolist.png';
+import myPhoto from '../assets/image/photo.jpg'
+import SocialNetworkImg from '../assets/image/SocialNetwork.jpg'
+import tidoListImg from '../assets/image/Todolist.jpg';
 
 const links: LinksType[] = [
     {href: 'https://github.com/Traihel', svgName: 'GitHub'},
@@ -9,6 +10,8 @@ const links: LinksType[] = [
     {href: 'https://vk.com/grodno1993', svgName: 'VK'},
     {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
 ]
+
+const arrSkills: string[] = ['JavaScript', 'TypeScript', 'React', 'Redux', 'HTML/CSS']
 
 export const state: StateType = {
     en: {
@@ -21,6 +24,14 @@ export const state: StateType = {
                 {href: '#contacts', navName: 'Contact'},
             ],
             links
+        },
+        mainComponent: {
+            h1: `Hi, I'm a developer`,
+            arrSkills,
+            location: 'based in Grodno, Belarus.',
+            a1: 'View My Works',
+            a2: 'Contact Me',
+            photo: myPhoto
         },
         skillsComponent: {
             span: 'What I Do?',
@@ -121,6 +132,14 @@ export const state: StateType = {
             ],
             links
         },
+        mainComponent: {
+            h1: `Привет`,
+            arrSkills,
+            location: 'Гродно, Беларусь.',
+            a1: 'Мои работы',
+            a2: 'Связаться со мной',
+            photo: myPhoto
+        },
         skillsComponent: {
             span: 'Что я умею?',
             title: 'Мои навыки',
@@ -216,6 +235,7 @@ export const state: StateType = {
 type StateType = {
     [key: string]: {
         headerComponent: HeaderComponentType
+        mainComponent: MainComponentType
         skillsComponent: SkillsComponentsType
         projectsComponent: ProjectsComponentsType
     }
@@ -237,6 +257,16 @@ type HrefNavType = '#home' | '#skills' | '#projects' | '#contacts'
 export type LinksType = {
     href: string
     svgName: LinksNameType
+}
+
+export type MainComponentType = {
+    h1: string
+    arrSkills: string[]
+    location: string
+    a1: string
+    a2: string
+    photo: string
+
 }
 
 export type SkillsComponentsType = {
