@@ -23,7 +23,7 @@ export function AboutMe(props: AboutMePropsType) {
                     <div className={styles.infoBlock}>
                         {props.aboutMeComponent.contacts.map((el, index) => {
                             return (
-                                <div className={styles.block}>
+                                <div key={index} className={styles.block}>
                                     <p className={styles.title}>{el.title}</p>
                                     <p className={styles.info}>{el.info}</p>
                                 </div>

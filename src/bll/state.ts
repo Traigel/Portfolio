@@ -18,7 +18,9 @@ const contactsLinks: LinksType[] = [
     {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
 ]
 
-const arrSkills: string[] = ['JavaScript', 'React', 'TypeScript', 'Redux', 'HTML/CSS', 'SASS/LESS', 'Axios', 'Unit Testing', 'Storybook', 'Material-ui', 'Bootstrap', 'Git', 'Postman']
+const arrSkills: string[] = ['JavaScript', 'React', 'TypeScript', 'Redux', 'Formik', 'HTML/CSS', 'SASS/LESS', 'Axios', 'Unit Testing', 'Storybook', 'Material-ui', 'Bootstrap', 'Git', 'Postman']
+
+const call: string = '+375 (29) 887-75-03'
 
 export const state: StateType = {
     en: {
@@ -46,7 +48,7 @@ export const state: StateType = {
             title: 'Know Me More',
             h2: `Hi, I'm `,
             name: 'Vladimir Traihel',
-            aboutMe: 'I\'m an experienced developer with experience building SPAs using React/Redux/TypeScript/HTML&CSS/SCSS. I like to develop applications that bring real value to the end user. Now I am improving my skills in this area and expanding my knowledge with new technologies. I spend my free time reading educational literature, as well as improving my English. Executive, punctual, quickly find a common language with people.',
+            aboutMe: 'I\'m a developer with experience building SPAs using React/Redux/TypeScript/HTML&CSS/SCSS. I like to develop applications that bring real value to the end user. Now I am improving my skills in this area and expanding my knowledge with new technologies. I spend my free time reading educational literature, as well as improving my English. Executive, punctual, quickly find a common language with people.',
             contacts: [
                 {title: 'Name:', info: 'Vladimir Traihel'},
                 {title: 'Email:', info: 'Vovatraigel@gmail.com'},
@@ -152,6 +154,7 @@ export const state: StateType = {
             title: 'Let\'s get in touch',
             p: 'Please share as much info, as possible so we can get the most out of our first catch-up. I will be glad to work with you if my skills and experience suit you. Willing to talk over the phone or in person.',
             h3: 'Call:',
+            call,
             contactsLinks,
             name: 'What is Your Name:',
             email: 'Your Email Address:',
@@ -189,7 +192,7 @@ export const state: StateType = {
             title: 'Узнать обо мне больше',
             h2: 'Привет, меня зовут ',
             name: 'Владимир Трайгель',
-            aboutMe: 'Я – опытный разработчик, имеющий опыт создания SPA с использованием React/Redux/TypeScript/HTML&CSS/SCSS. Мне нравится разрабатывать приложения, которые приносят реальную пользу конечному пользователю.  Сейчас совершенствую свои навыки в этом направление и расширяю знания новыми технологиями. Свободное время провожу за чтением обучающей литературы, а также улучшением английского языка. Исполнительный, пунктуальный, быстро нахожу общий язык с людьми.',
+            aboutMe: 'Я – разработчик, имеющий опыт создания SPA с использованием React/Redux/TypeScript/HTML&CSS/SCSS. Мне нравится разрабатывать приложения, которые приносят реальную пользу конечному пользователю.  Сейчас совершенствую свои навыки в этом направление и расширяю знания новыми технологиями. Свободное время провожу за чтением обучающей литературы, а также улучшением английского языка. Исполнительный, пунктуальный, быстро нахожу общий язык с людьми.',
             contacts: [
                 {title: 'Имя:', info: 'Владимир Трайгель'},
                 {title: 'Email:', info: 'Vovatraigel@gmail.com'},
@@ -295,6 +298,7 @@ export const state: StateType = {
             title: 'Контакты',
             p: 'Пожалуйста, поделитесь как можно большей информацией, чтобы мы могли получить максимальную отдачу от нашей первой встречи. Буду рад работать с вами, если мои навыки и опыт подойдут вам. Готов пообщаться по телефону или лично.',
             h3: 'Тел:',
+            call,
             contactsLinks,
             name: 'Ваше имя:',
             email: 'Адрес электронной почты:',
@@ -397,6 +401,7 @@ export type ContactsComponentType = {
     title: string
     p: string
     h3: string
+    call: string
     contactsLinks: LinksType[]
     name: string
     email: string
