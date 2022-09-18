@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Links.module.scss'
 import {SvgSelector} from "../../../common/svgSelector/SvgSelector";
-import {LinksType} from "../../../bll/state";
-import {LanguageType} from "../../../App";
+import {LinksType} from "../../../app/state";
+import {LanguageType} from "../../../app/App";
 
 type LinksPropsType = {
     links: LinksType[]

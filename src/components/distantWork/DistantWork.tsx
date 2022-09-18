@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './DistantWork.module.scss'
 import {Title} from "../../common/title/Title";
-import {DistantWorkComponentType} from "../../bll/state";
+import {DistantWorkComponentType} from "../../app/state";
 
 type DistantWorkPropsType = {
     distantWorkComponent: DistantWorkComponentType

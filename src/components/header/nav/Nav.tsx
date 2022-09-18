@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from './Nav.module.scss'
-import {NavType} from "../../../bll/state";
+import {NavType} from "../../../app/state";
 
 type NavPropsType = {
     nav: NavType[]

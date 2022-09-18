@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Skills.module.scss'
 import {Skill} from './skill/Skill';
 import {Title} from "../../common/title/Title";
-import {SkillsComponentsType} from "../../bll/state";
+import {SkillsComponentsType} from "../../app/state";
 
 type SkillsPropsType = {
     skillsComponent: SkillsComponentsType

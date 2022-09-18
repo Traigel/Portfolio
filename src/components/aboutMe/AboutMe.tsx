@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './AboutMe.module.scss'
 import {Title} from "../../common/title/Title";
-import {AboutMeComponent} from "../../bll/state";
+import {AboutMeComponent} from "../../app/state";
 
 type AboutMePropsType = {
     aboutMeComponent: AboutMeComponent

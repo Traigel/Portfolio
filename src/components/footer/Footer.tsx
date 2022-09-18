@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss'
-import {FooterComponentType} from "../../bll/state";
+import {FooterComponentType} from "../../app/state";
 
 type FooterPropsType = {
     footerComponent: FooterComponentType

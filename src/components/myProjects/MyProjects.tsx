@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './MyProjects.module.scss'
 import {Project} from './project/Project';
 import {Title} from '../../common/title/Title';
-import {ProjectsComponentsType} from "../../bll/state";
+import {ProjectsComponentsType} from "../../app/state";
 
 type ProjectsPropsType = {
     projectsComponent: ProjectsComponentsType

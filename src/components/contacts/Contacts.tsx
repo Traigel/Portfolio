@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Contacts.module.scss'
 import {Title} from "../../common/title/Title";
 import {Links} from "../header/links/Links";
-import {ContactsComponentType} from "../../bll/state";
+import {ContactsComponentType} from "../../app/state";
 
 type ContactsPropsType = {
     contactsComponent: ContactsComponentType

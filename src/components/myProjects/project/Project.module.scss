@@ -27,6 +27,12 @@
       background-size: cover;
       flex-direction: column;
       transition-duration: 0.5s;
+
+      @media (max-width: 1024px) {
+        opacity: 0.2;
+        transform: scale(1.04);
+        filter: blur(2px);
+      }
     }
 
     .projectInfo {
@@ -35,6 +41,10 @@
       top: 15%;
       transition-duration: 0.3s;
       padding: 5px;
+
+      @media (max-width: 1024px) {
+        opacity: 1;
+      }
 
       .title {
         margin: 20px 16px;
@@ -81,17 +91,16 @@
   }
 }
 
-.block:hover .icon {
-  opacity: 0.2;
-  transform: scale(1.04);
-  filter: blur(2px);
-
+@media (min-width: 1024px) {
+  .block:hover .icon {
+    opacity: 0.2;
+    transform: scale(1.04);
+    filter: blur(2px);
+  }
+  .project:hover .projectInfo {
+    opacity: 1;
+  }
 }
-
-.project:hover .projectInfo {
-  opacity: 1;
-}
-
 
 
 
