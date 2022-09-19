@@ -11,7 +11,7 @@ type ProjectsPropsType = {
 export function MyProjects(props: ProjectsPropsType) {
 
     return (
-        <div className={styles.projectsBlock} id={'projects'}>
+        <div className={styles.projectsBlock}>
             <div className={styles.projectsContainer}>
                 <Title
                     span={props.projectsComponent.span}

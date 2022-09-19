@@ -28,11 +28,11 @@ export const state: StateType = {
         headerComponent: {
             menuName: 'Menu',
             nav: [
-                {href: '#home', navName: 'Home'},
-                {href: '#about', navName: 'About'},
-                {href: '#skills', navName: 'Skills'},
-                {href: '#projects', navName: 'Portfolio'},
-                {href: '#contacts', navName: 'Contact'},
+                {href: 'home', navName: 'Home'},
+                {href: 'about', navName: 'About'},
+                {href: 'skills', navName: 'Skills'},
+                {href: 'projects', navName: 'Portfolio'},
+                {href: 'contacts', navName: 'Contact'},
             ],
             headerLinks
         },
@@ -182,11 +182,11 @@ export const state: StateType = {
         headerComponent: {
             menuName: 'Меню',
             nav: [
-                {href: '#home', navName: 'Главная'},
-                {href: '#about', navName: 'Обо мне'},
-                {href: '#skills', navName: 'Скилы'},
-                {href: '#projects', navName: 'Проекты'},
-                {href: '#contacts', navName: 'Контакты'},
+                {href: 'home', navName: 'Главная'},
+                {href: 'about', navName: 'Обо мне'},
+                {href: 'skills', navName: 'Скилы'},
+                {href: 'projects', navName: 'Проекты'},
+                {href: 'contacts', navName: 'Контакты'},
             ],
             headerLinks
         },
@@ -357,7 +357,7 @@ export type NavType = {
     navName: string
 }
 
-type HrefNavType = '#home' | '#skills' | '#projects' | '#contacts' | '#about'
+type HrefNavType = 'home' | 'skills' | 'projects' | 'contacts' | 'about'
 
 export type LinksType = {
     href: string

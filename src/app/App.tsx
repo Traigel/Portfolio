@@ -24,8 +24,10 @@ function App() {
             <Main mainComponent={state[language].mainComponent}/>
             <AboutMe aboutMeComponent={state[language].aboutMeComponent}/>
             <Skills skillsComponent={state[language].skillsComponent}/>
-            <MyProjects projectsComponent={state[language].projectsComponent}/>
-            <DistantWork distantWorkComponent={state[language].distantWorkComponent}/>
+            <div id={'projects'}>
+                <MyProjects projectsComponent={state[language].projectsComponent}/>
+                <DistantWork distantWorkComponent={state[language].distantWorkComponent}/>
+            </div>
             <Contacts contactsComponent={state[language].contactsComponent}/>
             <Footer footerComponent={state[language].footerComponent}/>
         </div>

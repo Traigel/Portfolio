@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from './Nav.module.scss'
 import {NavType} from "../../../app/state";
+import {Link} from "react-scroll";
 
 type NavPropsType = {
     nav: NavType[]
@@ -19,7 +20,16 @@ export function Nav(props: NavPropsType) {
             <div className={styles.navOpen}>
                 {props.nav.map((el, index) => {
                     return (
-                        <a className={styles.a} key={index} href={el.href}>{el.navName}</a>
+                        <Link
+                            key={index}
+                            to={el.href}
+                            className={styles.a}
+                            activeClass={styles.active}
+                            spy={true}
+                            smooth={true}
+                            offset={-60}
+                            duration={500}
+                        >{el.navName}</Link>
                     )
                 })}
             </div>
@@ -29,14 +39,17 @@ export function Nav(props: NavPropsType) {
                 {menu ? <div className={styles.menuOpen}>
                     {props.nav.map((el, index) => {
                         return (
-                            <a
+                            <Link
                                 key={index}
+                                to={el.href}
                                 className={styles.a}
-                                href={el.href}
+                                activeClass={styles.active}
+                                spy={true}
+                                smooth={true}
+                                offset={-60}
+                                duration={500}
                                 onClick={onClickHandler}
-                            >
-                                {el.navName}
-                            </a>
+                            >{el.navName}</Link>
                         )
                     })}
                 </div> : <div></div>}
