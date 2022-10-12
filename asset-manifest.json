@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.3af147e8.css",
-    "main.js": "/Portfolio/static/js/main.2e706c65.js",
+    "main.css": "/Portfolio/static/css/main.65aca631.css",
+    "main.js": "/Portfolio/static/js/main.5779b433.js",
     "static/js/787.28cb0dcd.chunk.js": "/Portfolio/static/js/787.28cb0dcd.chunk.js",
     "static/media/LearningCards.png": "/Portfolio/static/media/LearningCards.03a2226a744097aa44fa.png",
     "static/media/intro-bg-2.jpg": "/Portfolio/static/media/intro-bg-2.55f2cb3bb1a839af9f11.jpg",
     "static/media/SocialNetwork.jpg": "/Portfolio/static/media/SocialNetwork.a236acf8ca4f3db9a4bd.jpg",
+    "static/media/CarLeasingCalculator.jpeg": "/Portfolio/static/media/CarLeasingCalculator.08588c6e8997a2ddcf26.jpeg",
     "static/media/photo.jpg": "/Portfolio/static/media/photo.a137b5f50ce8641479cc.jpg",
     "static/media/Todolist.jpg": "/Portfolio/static/media/Todolist.936ed6662b1f418b0d15.jpg",
     "index.html": "/Portfolio/index.html",
-    "main.3af147e8.css.map": "/Portfolio/static/css/main.3af147e8.css.map",
-    "main.2e706c65.js.map": "/Portfolio/static/js/main.2e706c65.js.map",
+    "main.65aca631.css.map": "/Portfolio/static/css/main.65aca631.css.map",
+    "main.5779b433.js.map": "/Portfolio/static/js/main.5779b433.js.map",
     "787.28cb0dcd.chunk.js.map": "/Portfolio/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3af147e8.css",
-    "static/js/main.2e706c65.js"
+    "static/css/main.65aca631.css",
+    "static/js/main.5779b433.js"
   ]
 }
