@@ -72,10 +72,17 @@
         color: $bodyBgColor;
         background-color: $texColor;
         border-color: $texColor;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $hoverButton;
+          box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+        }
       }
 
       .contactMe {
         color: $texColor;
+        cursor: pointer;
 
         span {
           text-decoration: underline;
@@ -86,7 +93,6 @@
           text-decoration: none;
         }
       }
-
     }
 
     .photo {
@@ -125,9 +131,6 @@
           }
         }
       }
-
     }
-
   }
-
 }

@@ -46,7 +46,7 @@
       margin-bottom: 15px;
     }
 
-    a {
+    .contactMe {
       visibility: visible;
       animation-delay: 1s;
       box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
@@ -63,6 +63,15 @@
       vertical-align: middle;
       cursor: pointer;
       user-select: none;
+
+      &:hover {
+        background-color: $hoverTwoButton;
+        border-color: $hoverTwoButton;
+      }
+
+      &:active {
+        color: $bodyBgColor;
+      }
     }
   }
 }

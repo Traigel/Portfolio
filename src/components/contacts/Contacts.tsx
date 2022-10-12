@@ -1,14 +1,67 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Contacts.module.scss'
 import {Title} from "../../common/title/Title";
 import {Links} from "../header/links/Links";
 import {ContactsComponentType} from "../../app/state";
+import {useFormik} from "formik";
+import axios from "axios";
+
+type FormikErrorType = {
+    name?: string
+    email?: string
+    formMessage?: string
+}
 
 type ContactsPropsType = {
     contactsComponent: ContactsComponentType
 }
 
 export function Contacts(props: ContactsPropsType) {
+
+    const [loading, setLoading] = useState<boolean>(false)
+    const [myMessages, setMyMessages] = useState<boolean>(false)
+    const [error, setError] = useState<boolean>(false)
+
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            formMessage: ''
+        },
+        validate: (values) => {     //валидация, обработка ошибок
+            const errors: FormikErrorType = {}
+            if (!values.name) {
+                errors.name = props.contactsComponent.errorName
+            }
+            if (!values.email) {
+                errors.email = props.contactsComponent.errorEmail
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = props.contactsComponent.errorInvalidEmail
+            }
+            if (!values.formMessage) {
+                errors.formMessage = props.contactsComponent.errorMessage
+            }
+            return errors
+        },
+        onSubmit: values => {
+            setLoading(true)
+            axios.post('https://gmail-smtp-node-js.herokuapp.com/sendMessage', values)
+                .then(res => {
+                    setMyMessages(true)
+                    setError(false)
+                    formik.resetForm();
+                })
+                .catch(error => {
+                    setError(true)
+                })
+                .finally(() => {
+                    setLoading(false)
+                })
+        },
+    });
+
+    const finalButtonStyle = `${styles.button} ${loading ? styles.disable : ''}`
+
     return (
         <div className={styles.contactsBlock} id={'contacts'}>
             <div className={styles.contactsContainer}>
@@ -23,21 +76,59 @@ export function Contacts(props: ContactsPropsType) {
                         </div>
                     </div>
                     <div className={styles.form}>
-                        <form>
-                            <div>
+                        <form onSubmit={formik.handleSubmit}>
+                            <div className={styles.formBox}>
                                 <label>{props.contactsComponent.name}</label>
-                                <input id={'name'} name={'name'} type={'text'}/>
+                                <input
+                                    disabled={loading}
+                                    {...formik.getFieldProps('name')}
+                                />
+                                <div className={styles.error}>
+                                    {formik.touched.name && formik.errors.name && formik.errors.name}
+                                </div>
                             </div>
-                            <div>
+                            <div className={styles.formBox}>
                                 <label>{props.contactsComponent.email}</label>
-                                <input id={'email'} name={'email'} type={'email'}/>
+                                <input
+                                    disabled={loading}
+                                    {...formik.getFieldProps('email')}
+                                />
+                                <div className={styles.error}>
+                                    {formik.touched.email && formik.errors.email && formik.errors.email}
+                                </div>
                             </div>
-                            <div>
+                            <div className={styles.formBox}>
                                 <label>{props.contactsComponent.formMessage}</label>
-                                <textarea id={'formMessage'} name={'formMessage'}></textarea>
+                                <textarea
+                                    disabled={loading}
+                                    {...formik.getFieldProps('formMessage')}
+                                ></textarea>
+                                <div className={styles.error}>
+                                    {formik.touched.formMessage && formik.errors.formMessage && formik.errors.formMessage}
+                                </div>
                             </div>
-                            <div>
-                                <button>{props.contactsComponent.button} &#9658;</button>
+                            <div className={styles.formBox}>
+                                <button
+                                    disabled={loading}
+                                    className={finalButtonStyle}
+                                    type="submit">
+                                    {
+                                        loading ?
+                                            <span className={styles.loader}></span>
+                                            :
+                                            <span>{props.contactsComponent.button} &#9658;</span>
+                                    }
+                                </button>
+                                <div className={styles.myMessages}>
+                                    {myMessages ?
+                                        <span>{props.contactsComponent.myMessages}</span>
+                                        : ''
+                                    }
+                                    {error ?
+                                        <span className={styles.errorMessages}>{props.contactsComponent.error}</span>
+                                        : ''
+                                    }
+                                </div>
                             </div>
                         </form>
                     </div>

@@ -49,6 +49,20 @@
       .title {
         margin: 20px 16px;
         color: $bodyBgColor;
+
+        @media (max-width: 906px) {
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+
+        @media (max-width: 681px) {
+          margin: 20px 16px;
+        }
+
+        @media (max-width: 399px) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
       }
 
       .description {

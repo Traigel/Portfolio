@@ -1,9 +1,10 @@
 import {LinksNameType, SkillsNameType} from "../common/svgSelector/SvgSelector";
 import myPhoto from '../assets/image/photo.jpg'
 import bgImg from '../assets/image/intro-bg-2.jpg'
-import SocialNetworkImg from '../assets/image/SocialNetwork.jpg'
+import socialNetworkImg from '../assets/image/SocialNetwork.jpg'
 import tidoListImg from '../assets/image/Todolist.jpg';
-import LearningCardsImg from '../assets/image/LearningCards.png';
+import learningCardsImg from '../assets/image/LearningCards.png';
+import carCalculator from '../assets/image/CarLeasingCalculator.jpeg'
 
 const headerLinks: LinksType[] = [
     {href: 'https://github.com/Traihel', svgName: 'GitHub'},
@@ -19,7 +20,7 @@ const contactsLinks: LinksType[] = [
     {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
 ]
 
-const arrSkills: string[] = ['React', 'JavaScript', 'Redux', 'TypeScript', 'Formik', 'Axios', 'Material-ui', 'Bootstrap', 'HTML/CSS', 'SASS/LESS', 'Storybook', 'Postman', 'Unit Testing', 'Git']
+const arrSkills: string[] = ['React', 'JavaScript', 'Redux', 'TypeScript', 'Node JS', 'Formik', 'Axios', 'Material-ui', 'HTML/CSS', 'SASS/LESS', 'Storybook', 'Postman', 'Unit Testing', 'Git']
 
 const call: string = '+375 (29) 887-75-03'
 
@@ -66,8 +67,12 @@ export const state: StateType = {
                     description: 'An open source JavaScript library for developing user interfaces. Can be used to develop single page and mobile applications.'
                 },
                 {
-                    svgName: 'Redux',
+                    svgName: 'Redux / Redux Toolkit',
                     description: 'An open source JavaScript library for managing application state.'
+                },
+                {
+                    svgName: 'Node JS',
+                    description: 'Node.js is an out-of-browser JavaScript runtime that allows you to write server-side code for web pages and web applications.'
                 },
                 {
                     svgName: 'JavaScript',
@@ -137,21 +142,27 @@ export const state: StateType = {
             projects: [
                 {
                     title: 'Social Network',
-                    img: SocialNetworkImg,
+                    img: socialNetworkImg,
                     description: 'An online platform that is used for communication, dating, creating social relationships between people...',
-                    href: 'https://github.com/Traihel/Social-network-TS'
+                    href: 'https://traihel.github.io/Social-network-TS/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list...',
-                    href: 'https://github.com/Traihel/ToDoList-TS'
+                    href: 'https://traihel.github.io/ToDoList-TS/'
                 },
                 {
                     title: 'Learning Cards',
-                    img: LearningCardsImg,
+                    img: learningCardsImg,
                     description: 'Is a card bearing information, which is intended to be used as an aid in memorization. Flashcards are often used to memorize vocabulary, historical dates...',
-                    href: 'https://github.com/Traihel/cards-nya-front-2-0'
+                    href: 'https://traihel.github.io/Learning-Cards/'
+                },
+                {
+                    title: 'Car leasing calculator',
+                    img: carCalculator,
+                    description: 'Calculation of leasing conditions, you just need to enter the cost of the car, the amount of the advance, the loan term in months - the calculator will calculate the monthly payment...',
+                    href: 'https://traihel.github.io/Car-leasing-calculator/'
                 },
 
             ]
@@ -168,9 +179,15 @@ export const state: StateType = {
             call,
             contactsLinks,
             name: 'What is Your Name:',
+            errorName: 'Enter your name',
             email: 'Your Email Address:',
+            errorEmail: 'Enter your email',
+            errorInvalidEmail: 'Invalid email address',
             formMessage: 'How can I Help you?:',
-            button: 'Send'
+            errorMessage: 'Enter your message',
+            button: 'Send',
+            myMessages: 'Thank you for your interest in my person, as soon as I have time, I will definitely contact you.',
+            error: 'Error, please try again later.'
 
         },
         footerComponent: {
@@ -220,8 +237,12 @@ export const state: StateType = {
                     description: 'JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. Может использоваться для разработки одностраничных и мобильных приложений.'
                 },
                 {
-                    svgName: 'Redux',
+                    svgName: 'Redux / Redux Toolkit',
                     description: 'Библиотека для JavaScript с открытым исходным кодом, предназначенная для управления состоянием приложения.'
+                },
+                {
+                    svgName: 'Node JS',
+                    description: 'Node.js — среда выполнения кода JavaScript вне браузера, который позволяет писать серверный код для веб-страниц и веб-приложений.'
                 },
                 {
                     svgName: 'JavaScript',
@@ -291,21 +312,27 @@ export const state: StateType = {
             projects: [
                 {
                     title: 'Social Network',
-                    img: SocialNetworkImg,
+                    img: socialNetworkImg,
                     description: 'Онлайн-платформа, которая используется для общения, знакомств, создания социальных отношений между людьми...',
-                    href: 'https://github.com/Traihel/Social-network-TS'
+                    href: 'https://traihel.github.io/Social-network-TS/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'Список дел, которые вам нужно выполнить или того, что вы хотите сделать. При выполнении задачи, её обычно вычеркивают из списка...',
-                    href: 'https://github.com/Traihel/ToDoList-TS'
+                    href: 'https://traihel.github.io/ToDoList-TS/'
                 },
                 {
                     title: 'Learning Cards',
-                    img: LearningCardsImg,
+                    img: learningCardsImg,
                     description: 'Представляет собой карточку с информацией, которая предназначена для помощи в запоминании. Карточки часто используются для запоминания лексики, исторических дат...',
-                    href: 'https://github.com/Traihel/cards-nya-front-2-0'
+                    href: 'https://traihel.github.io/Learning-Cards/'
+                },
+                {
+                    title: 'Car leasing calculator',
+                    img: carCalculator,
+                    description: 'Расчет условий лизинга, вам достаточно ввести стоимость автомобиля, сумму аванса, срок кредита в месяцах - калькулятор рассчитает ежемесячный платеж...',
+                    href: 'https://traihel.github.io/Car-leasing-calculator/'
                 },
             ]
         },
@@ -321,9 +348,15 @@ export const state: StateType = {
             call,
             contactsLinks,
             name: 'Ваше имя:',
+            errorName: 'Введите ваше имя',
             email: 'Адрес электронной почты:',
+            errorEmail: 'Введите адрес электронной почты',
+            errorInvalidEmail: 'Неверный адрес электронной почт',
             formMessage: 'Чем я могу помочь?:',
-            button: 'Отправить'
+            errorMessage: 'Введите сообщение',
+            button: 'Отправить',
+            myMessages: 'Спосибо за интерес к моей персона, как только у меня появиться время я обязательно с вами свяжусь.',
+            error: 'Ошибка, повторите попытку позже.'
         },
         footerComponent: {
             copyright: 'Copyright © 2022. Все права защищены.',
@@ -424,9 +457,15 @@ export type ContactsComponentType = {
     call: string
     contactsLinks: LinksType[]
     name: string
+    errorName: string
     email: string
+    errorEmail: string
+    errorInvalidEmail: string
     formMessage: string
+    errorMessage: string
     button: string
+    myMessages: string
+    error: string
 }
 
 export type FooterComponentType = {

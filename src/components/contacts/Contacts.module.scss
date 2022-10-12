@@ -64,7 +64,7 @@
             }
 
             &:hover svg {
-              fill: $bgColor;
+              fill: black;
             }
 
             svg {
@@ -123,10 +123,12 @@
             }
           }
 
-          button {
+          .button {
             box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
             cursor: pointer;
-            padding: 13px 42px;
+            width: 142px;
+            height: 50px;
+            padding: 13px 0;
             font-weight: 500;
             border: none;
             color: $bodyBgColor;
@@ -137,14 +139,97 @@
             vertical-align: middle;
             font-size: 16px;
             text-transform: none;
+            transition-duration: 0.5s;
 
+            &:hover {
+              background-color: $hoverButton;
+              box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+            }
+
+            .loader {
+              width: 35px;
+              height: 35px;
+              border: 4px solid $bodyBgColor;
+              border-bottom-color: transparent;
+              border-radius: 50%;
+              display: inline-block;
+              box-sizing: border-box;
+              animation: rotation 1s linear infinite;
+
+              @keyframes rotation {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(360deg);
+                }
+              }
+            }
+          }
+
+          .disable {
+            padding: 7.5px;
+            transition: none;
+
+            &:hover {
+              background-color: $texColor;
+              box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+              cursor: not-allowed;
+            }
           }
         }
 
+        .formBox {
+          position: relative;
 
+          .error {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            color: red;
+            font-size: 14px;
+          }
+        }
+
+        .myMessages {
+          right: 0;
+          top: -24px;
+          position: absolute;
+          width: 70%;
+          font-size: 21px;
+          margin-top: 20px;
+          line-height: 1.8;
+
+          @media (max-width: 1320px) {
+            font-size: 20px;
+            width: 100%;
+            top: auto;
+            right: auto;
+            left: 0;
+          }
+          @media (max-width: 999px) {
+            width: 70%;
+            right: 0;
+            top: -24px;
+            left: auto;
+          }
+          @media (max-width: 670px) {
+            padding-top: 20px;
+            margin-bottom: -80px;
+            position: relative;
+            width: 100%;
+            font-size: 18px;
+          }
+          @media (max-width: 610px) {
+            font-size: 16px;
+          }
+
+          .errorMessages {
+            color: red;
+          }
+        }
       }
     }
-
   }
 }
 
@@ -162,6 +247,6 @@ select:-webkit-autofill:focus {
   //-webkit-text-fill-color: #1f1f20;
   -webkit-box-shadow: 0 0 0 1000px $bgSecondColor inset;
   transition: background-color 5000s ease-in-out 0s;
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%);
 }
 

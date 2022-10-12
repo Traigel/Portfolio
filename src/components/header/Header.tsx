@@ -5,6 +5,7 @@ import {SvgSelector} from "../../common/svgSelector/SvgSelector";
 import {Links} from "./links/Links";
 import {HeaderComponentType} from "../../app/state";
 import {LanguageType} from "../../app/App";
+import {Link} from "react-scroll";
 
 type HeaderPropsType = {
     headerComponent: HeaderComponentType
@@ -16,9 +17,14 @@ export function Header(props: HeaderPropsType) {
     return (
         <header className={styles.header}>
             <div className={styles.headerContainer}>
-                <a href={'#'} className={styles.logo}>
-                    <SvgSelector svgName={"PortfolioSvg"}/>
-                </a>
+                <Link
+                    className={styles.logo}
+                    to={'home'}
+                    spy={true}
+                    smooth={true}
+                    offset={-60}
+                    duration={500}
+                ><SvgSelector svgName={"PortfolioSvg"}/></Link>
                 <Nav nav={props.headerComponent.nav} menuName={props.headerComponent.menuName}/>
                 <Links
                     links={props.headerComponent.headerLinks}
