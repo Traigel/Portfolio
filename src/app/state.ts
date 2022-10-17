@@ -5,6 +5,7 @@ import socialNetworkImg from '../assets/image/SocialNetwork.jpg'
 import tidoListImg from '../assets/image/Todolist.jpg';
 import learningCardsImg from '../assets/image/LearningCards.png';
 import carCalculator from '../assets/image/CarLeasingCalculator.jpeg'
+import stoKids from '../assets/image/stoKids.jpg'
 
 const headerLinks: LinksType[] = [
     {href: 'https://github.com/Traihel', svgName: 'GitHub'},
@@ -141,9 +142,15 @@ export const state: StateType = {
             title: 'Some of my most recent projects',
             projects: [
                 {
+                    title: 'Learning Cards',
+                    img: learningCardsImg,
+                    description: 'Is a card bearing information, which is intended to be used as an aid in memorization. Flashcards are often used to memorize vocabulary, historical dates...',
+                    href: 'https://traihel.github.io/Learning-Cards/'
+                },
+                {
                     title: 'Social Network',
                     img: socialNetworkImg,
-                    description: 'An online platform that is used for communication, dating, creating social relationships between people...',
+                    description: 'An online platform that is used for communication, dating, creating social relationships between people with similar interests or offline connections, as well as for entertainment...',
                     href: 'https://traihel.github.io/Social-network-TS/'
                 },
                 {
@@ -153,16 +160,16 @@ export const state: StateType = {
                     href: 'https://traihel.github.io/ToDoList-TS/'
                 },
                 {
-                    title: 'Learning Cards',
-                    img: learningCardsImg,
-                    description: 'Is a card bearing information, which is intended to be used as an aid in memorization. Flashcards are often used to memorize vocabulary, historical dates...',
-                    href: 'https://traihel.github.io/Learning-Cards/'
-                },
-                {
                     title: 'Car leasing calculator',
                     img: carCalculator,
                     description: 'Calculation of leasing conditions, you just need to enter the cost of the car, the amount of the advance, the loan term in months - the calculator will calculate the monthly payment...',
                     href: 'https://traihel.github.io/Car-leasing-calculator/'
+                },
+                {
+                    title: 'Stokids.by',
+                    img: stoKids,
+                    description: 'A web page whose main task is to collect contact information of the target audience. It is used to increase the effectiveness of advertising, increase the audience...',
+                    href: 'https://traihel.github.io/stoKids-landing-beta/'
                 },
 
             ]
@@ -311,9 +318,15 @@ export const state: StateType = {
             span: 'Портфолио',
             projects: [
                 {
+                    title: 'Learning Cards',
+                    img: learningCardsImg,
+                    description: 'Представляет собой карточку с информацией, которая предназначена для помощи в запоминании. Карточки часто используются для запоминания лексики, исторических дат...',
+                    href: 'https://traihel.github.io/Learning-Cards/'
+                },
+                {
                     title: 'Social Network',
                     img: socialNetworkImg,
-                    description: 'Онлайн-платформа, которая используется для общения, знакомств, создания социальных отношений между людьми...',
+                    description: 'Онлайн-платформа, которая используется для общения, знакомств, создания социальных отношений между людьми со схожими интересами или офлайн-связей, а также для развлечения...',
                     href: 'https://traihel.github.io/Social-network-TS/'
                 },
                 {
@@ -323,17 +336,18 @@ export const state: StateType = {
                     href: 'https://traihel.github.io/ToDoList-TS/'
                 },
                 {
-                    title: 'Learning Cards',
-                    img: learningCardsImg,
-                    description: 'Представляет собой карточку с информацией, которая предназначена для помощи в запоминании. Карточки часто используются для запоминания лексики, исторических дат...',
-                    href: 'https://traihel.github.io/Learning-Cards/'
-                },
-                {
                     title: 'Car leasing calculator',
                     img: carCalculator,
                     description: 'Расчет условий лизинга, вам достаточно ввести стоимость автомобиля, сумму аванса, срок кредита в месяцах - калькулятор рассчитает ежемесячный платеж...',
                     href: 'https://traihel.github.io/Car-leasing-calculator/'
                 },
+                {
+                    title: 'Stokids.by',
+                    img: stoKids,
+                    description: 'Веб-страница, основной задачей которой является сбор контактной информации целевой аудитории. Используется для повышения эффективности рекламы, увеличения аудитории...',
+                    href: 'https://traihel.github.io/stoKids-landing-beta/'
+                },
+
             ]
         },
         distantWorkComponent: {
