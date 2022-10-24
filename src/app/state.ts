@@ -145,19 +145,19 @@ export const state: StateType = {
                     title: 'Learning Cards',
                     img: learningCardsImg,
                     description: 'Is a card bearing information, which is intended to be used as an aid in memorization. Flashcards are often used to memorize vocabulary, historical dates...',
-                    href: 'https://traihel.github.io/Learning-Cards/'
+                    href: 'https://Traihel.github.io/Learning-Cards/'
                 },
                 {
                     title: 'Social Network',
                     img: socialNetworkImg,
                     description: 'An online platform that is used for communication, dating, creating social relationships between people with similar interests or offline connections, as well as for entertainment...',
-                    href: 'https://traihel.github.io/Social-network-TS/'
+                    href: 'https://Traihel.github.io/Social-network/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list...',
-                    href: 'https://traihel.github.io/ToDoList-TS/'
+                    href: 'https://Traihel.github.io/ToDoList'
                 },
                 {
                     title: 'Car leasing calculator',
@@ -327,13 +327,13 @@ export const state: StateType = {
                     title: 'Social Network',
                     img: socialNetworkImg,
                     description: 'Онлайн-платформа, которая используется для общения, знакомств, создания социальных отношений между людьми со схожими интересами или офлайн-связей, а также для развлечения...',
-                    href: 'https://traihel.github.io/Social-network-TS/'
+                    href: 'https://traihel.github.io/Social-network/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'Список дел, которые вам нужно выполнить или того, что вы хотите сделать. При выполнении задачи, её обычно вычеркивают из списка...',
-                    href: 'https://traihel.github.io/ToDoList-TS/'
+                    href: 'https://traihel.github.io/ToDoList/'
                 },
                 {
                     title: 'Car leasing calculator',
