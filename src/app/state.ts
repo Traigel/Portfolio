@@ -8,17 +8,17 @@ import carCalculator from '../assets/image/CarLeasingCalculator.jpeg'
 import stoKids from '../assets/image/stoKids.jpg'
 
 const headerLinks: LinksType[] = [
-    {href: 'https://github.com/Traihel', svgName: 'GitHub'},
+    {href: 'https://github.com/Traigel', svgName: 'GitHub'},
     {href: 'https://www.instagram.com/vova_tron/', svgName: 'Instagram'},
-    {href: 'https://www.linkedin.com/in/vladimir-traihel/', svgName: 'Linkedin'},
+    {href: 'https://www.linkedin.com/in/traigel/', svgName: 'Linkedin'},
 ]
 
 const contactsLinks: LinksType[] = [
-    {href: 'https://github.com/Traihel', svgName: 'GitHub'},
+    {href: 'https://github.com/Traigel', svgName: 'GitHub'},
     {href: 'https://www.instagram.com/vova_tron/', svgName: 'Instagram'},
-    {href: 'https://www.linkedin.com/in/vladimir-traihel/', svgName: 'Linkedin'},
+    {href: 'https://www.linkedin.com/in/traigel/', svgName: 'Linkedin'},
     {href: 'https://vk.com/grodno1993', svgName: 'VK'},
-    {href: 'https://www.codewars.com/users/Traihel', svgName: 'CodeWars'},
+    {href: 'https://www.codewars.com/users/Traigel', svgName: 'CodeWars'},
 ]
 
 const arrSkills: string[] = ['React', 'JavaScript', 'Redux', 'TypeScript', 'Node JS', 'Formik', 'Axios', 'Material-ui', 'HTML/CSS', 'SASS/LESS', 'Storybook', 'Postman', 'Unit Testing', 'Git']
@@ -50,10 +50,10 @@ export const state: StateType = {
             span: 'About Me',
             title: 'Know Me More',
             h2: `Hi, I'm `,
-            name: 'Vladimir Traihel',
+            name: 'Vladimir Traigel',
             aboutMe: 'I\'m a developer with experience building SPAs using React/Redux/TypeScript/HTML&CSS/SCSS. I like to develop applications that bring real value to the end user. Now I am improving my skills in this area and expanding my knowledge with new technologies (Node.js). I spend my free time reading educational literature, as well as improving my English.',
             contacts: [
-                {title: 'Name:', info: 'Vladimir Traihel'},
+                {title: 'Name:', info: 'Vladimir Traigel'},
                 {title: 'Email:', info: 'Vovatraigel@gmail.com'},
                 {title: 'Date of birth:', info: '17 September, 1993'},
                 {title: 'From:', info: 'Grodno, Belarus.'},
@@ -145,31 +145,31 @@ export const state: StateType = {
                     title: 'Learning Cards',
                     img: learningCardsImg,
                     description: 'Is a card bearing information, which is intended to be used as an aid in memorization. Flashcards are often used to memorize vocabulary, historical dates...',
-                    href: 'https://Traihel.github.io/Learning-Cards/'
+                    href: 'https://Traigel.github.io/Learning-Cards/'
                 },
                 {
                     title: 'Social Network',
                     img: socialNetworkImg,
                     description: 'An online platform that is used for communication, dating, creating social relationships between people with similar interests or offline connections, as well as for entertainment...',
-                    href: 'https://Traihel.github.io/Social-network/'
+                    href: 'https://Traigel.github.io/Social-network/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list...',
-                    href: 'https://Traihel.github.io/ToDoList'
+                    href: 'https://Traigel.github.io/ToDoList'
                 },
                 {
                     title: 'Car leasing calculator',
                     img: carCalculator,
                     description: 'Calculation of leasing conditions, you just need to enter the cost of the car, the amount of the advance, the loan term in months - the calculator will calculate the monthly payment...',
-                    href: 'https://traihel.github.io/Car-leasing-calculator/'
+                    href: 'https://traigel.github.io/Car-leasing-calculator/'
                 },
                 {
                     title: 'Stokids.by',
                     img: stoKids,
                     description: 'A web page whose main task is to collect contact information of the target audience. It is used to increase the effectiveness of advertising, increase the audience...',
-                    href: 'https://traihel.github.io/stoKids-landing-beta/'
+                    href: 'https://traigel.github.io/stoKids-landing-beta/'
                 },
 
             ]
@@ -199,7 +199,7 @@ export const state: StateType = {
         },
         footerComponent: {
             copyright: 'Copyright © 2022. All Rights Reserved.',
-            designed: 'Developed by Traihel Vladimir'
+            designed: 'Developed by Vladimir Traigel'
         }
     },
     ru: {
@@ -321,31 +321,31 @@ export const state: StateType = {
                     title: 'Learning Cards',
                     img: learningCardsImg,
                     description: 'Представляет собой карточку с информацией, которая предназначена для помощи в запоминании. Карточки часто используются для запоминания лексики, исторических дат...',
-                    href: 'https://traihel.github.io/Learning-Cards/'
+                    href: 'https://traigel.github.io/Learning-Cards/'
                 },
                 {
                     title: 'Social Network',
                     img: socialNetworkImg,
                     description: 'Онлайн-платформа, которая используется для общения, знакомств, создания социальных отношений между людьми со схожими интересами или офлайн-связей, а также для развлечения...',
-                    href: 'https://traihel.github.io/Social-network/'
+                    href: 'https://traigel.github.io/Social-network/'
                 },
                 {
                     title: 'Todo list',
                     img: tidoListImg,
                     description: 'Список дел, которые вам нужно выполнить или того, что вы хотите сделать. При выполнении задачи, её обычно вычеркивают из списка...',
-                    href: 'https://traihel.github.io/ToDoList/'
+                    href: 'https://traigel.github.io/ToDoList/'
                 },
                 {
                     title: 'Car leasing calculator',
                     img: carCalculator,
                     description: 'Расчет условий лизинга, вам достаточно ввести стоимость автомобиля, сумму аванса, срок кредита в месяцах - калькулятор рассчитает ежемесячный платеж...',
-                    href: 'https://traihel.github.io/Car-leasing-calculator/'
+                    href: 'https://traigel.github.io/Car-leasing-calculator/'
                 },
                 {
                     title: 'Stokids.by',
                     img: stoKids,
                     description: 'Веб-страница, основной задачей которой является сбор контактной информации целевой аудитории. Используется для повышения эффективности рекламы, увеличения аудитории...',
-                    href: 'https://traihel.github.io/stoKids-landing-beta/'
+                    href: 'https://traigel.github.io/stoKids-landing-beta/'
                 },
 
             ]
