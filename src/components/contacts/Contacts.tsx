@@ -45,7 +45,7 @@ export function Contacts(props: ContactsPropsType) {
         },
         onSubmit: values => {
             setLoading(true)
-            axios.post('https://gmail-smtp-node-js.herokuapp.com/sendMessage', values)
+            axios.post('https://gmail-smtp-production-be4f.up.railway.app/sendMessage', values)
                 .then(res => {
                     setMyMessages(true)
                     setError(false)
