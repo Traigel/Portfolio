@@ -1,59 +1,58 @@
 import React, {useState} from 'react';
 import styles from './Nav.module.scss'
-import {NavType} from "../../../app/state";
 import {Link} from "react-scroll";
+import {useTranslation} from 'react-i18next';
+import {Namespace} from '../../../types/enum/i18n';
+import {navInApp} from '../../../constants/nav';
 
-type NavPropsType = {
-    nav: NavType[]
-    menuName: string
-}
+export function Nav() {
 
-export function Nav(props: NavPropsType) {
+  const {t} = useTranslation(Namespace.Header);
 
-    const [menu, setMenu] = useState<boolean>(false)
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
 
-    const onClickHandler = () => setMenu(!menu)
+  const onClickHandler = () => setIsOpenMenu(!isOpenMenu)
 
-    return (
-        <div className={styles.nav}>
+  return (
+      <div className={styles.nav}>
 
-            <div className={styles.navOpen}>
-                {props.nav.map((el, index) => {
-                    return (
-                        <Link
-                            key={index}
-                            to={el.href}
-                            className={styles.a}
-                            activeClass={styles.active}
-                            spy={true}
-                            smooth={true}
-                            offset={-60}
-                            duration={500}
-                        >{el.navName}</Link>
-                    )
-                })}
-            </div>
-
-            <div className={styles.menu}>
-                <h3 className={styles.a} onClick={onClickHandler}>&equiv; {props.menuName}</h3>
-                {menu ? <div className={styles.menuOpen}>
-                    {props.nav.map((el, index) => {
-                        return (
-                            <Link
-                                key={index}
-                                to={el.href}
-                                className={styles.a}
-                                activeClass={styles.active}
-                                spy={true}
-                                smooth={true}
-                                offset={-60}
-                                duration={500}
-                                onClick={onClickHandler}
-                            >{el.navName}</Link>
-                        )
-                    })}
-                </div> : <div></div>}
-            </div>
+        <div className={styles.navOpen}>
+          {navInApp.map((el, index) => {
+            return (
+                <Link
+                    key={index}
+                    to={el.href}
+                    className={styles.a}
+                    activeClass={styles.active}
+                    spy={true}
+                    smooth={true}
+                    offset={-60}
+                    duration={500}
+                >{t(el.navName)}</Link>
+            )
+          })}
         </div>
-    );
+
+        <div className={styles.menu}>
+          <h3 className={styles.a} onClick={onClickHandler}>&equiv; {t('menu')}</h3>
+          {isOpenMenu ? <div className={styles.menuOpen}>
+            {navInApp.map((el, index) => {
+              return (
+                  <Link
+                      key={index}
+                      to={el.href}
+                      className={styles.a}
+                      activeClass={styles.active}
+                      spy={true}
+                      smooth={true}
+                      offset={-60}
+                      duration={500}
+                      onClick={onClickHandler}
+                  >{t(el.navName)}</Link>
+              )
+            })}
+          </div> : <div></div>}
+        </div>
+      </div>
+  );
 }

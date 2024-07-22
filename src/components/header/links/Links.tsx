@@ -1,43 +1,44 @@
 import React from 'react';
 import styles from './Links.module.scss'
 import {SvgSelector} from "../../../common/svgSelector/SvgSelector";
-import {LinksType} from "../../../app/state";
-import {LanguageType} from "../../../app/App";
+import {AllLocales, Locale} from '../../../types/enum/i18n';
+import {headerLinks} from '../../../constants/links';
+import {useTranslation} from 'react-i18next';
 
-type LinksPropsType = {
-    links: LinksType[]
-    callback?: (language: LanguageType) => void
-    language?: LanguageType
-}
+export function Links({hideLanguage = false}: { hideLanguage?: boolean }) {
 
-export function Links(props: LinksPropsType) {
+  const {i18n} = useTranslation();
 
-    const onClickHandler = (language: LanguageType) => {
-        props.callback && props.callback(language)
-    }
+  const onClickHandler = async (language: Locale) => {
+    await i18n.changeLanguage(language)
+  }
 
-    return (
-        <div className={styles.links}>
-            {props.links.map((el, index) => {
-                return (
-                    <a key={index} href={el.href} target="_blank">
-                        <SvgSelector svgName={el.svgName}/>
-                    </a>
-                )
-            })}
-            {props.callback &&
-                <div className={styles.language}>
-                <span
-                    onClick={() => onClickHandler("en")}
-                    className={props.language === "en" ? styles.active : ''}
-                >en</span>
-                    |
-                    <span onClick={() => onClickHandler("ru")}
-                          className={props.language === "ru" ? styles.active : ''}
-                    >ru</span>
-                </div>
-            }
+  return (
+      <div className={styles.links}>
+        {headerLinks.map((el, index) => {
+          return (
+              <a key={index} href={el.href} target="_blank">
+                <SvgSelector svgName={el.svgName}/>
+              </a>
+          )
+        })}
+        {!hideLanguage &&
+            <div className={styles.language}>
+              {AllLocales.map((language, index) =>
+                  <>
+                   <span key={index}
+                         onClick={() => onClickHandler(language)}
+                         className={i18n.language === language ? styles.active : ''}
+                   >
+                      {language}
+                  </span>
 
-        </div>
-    );
+                    {index < AllLocales.length - 1 && <span>|</span>}
+                  </>
+              )}
+            </div>
+        }
+
+      </div>
+  );
 }
